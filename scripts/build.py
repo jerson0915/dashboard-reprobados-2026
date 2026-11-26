@@ -23,6 +23,14 @@ RAIZ = Path(__file__).resolve().parent.parent
 # Orden oficial de los grados; cada uno es una hoja del Excel
 GRADOS = ["6-1", "6-2", "7-1", "7-2", "8-1", "8-2", "9-1", "9-2", "10-1", "11-1"]
 
+# Estudiantes promovidos por decisión del comité, además de los que cumplen el criterio
+# de repechaje (este criterio se calcula en src/template.html, constante PRIO).
+# Se escriben como (grado, nombre exacto del Excel).
+PROMO_COMITE = [
+    ("6-1", "ORTIZ CUERO BRITHANY SOFIA"),
+    ("6-2", "GONZALEZ MALAGA HERNANDO"),
+]
+
 
 def leer_estudiantes(libro):
     """Recorre las hojas por grado y devuelve una lista de estudiantes (diccionarios)."""
@@ -74,7 +82,17 @@ def verificar(estudiantes, libro):
     print(f"✔ Verificado: {len(estudiantes)} estudiantes, {sum(s['nb'] for s in estudiantes)} áreas en bajo")
 
 
-def anonimizar(estudiantes, casos):
+def leer_promo_comite(estudiantes):
+    """Devuelve los nombres de PROMO_COMITE y verifica que existan en el grado indicado."""
+    nombres = []
+    for grado, nombre in PROMO_COMITE:
+        assert any(s["g"] == grado and s["n"] == nombre for s in estudiantes), \
+            f"No se encontró a {nombre} en {grado}"
+        nombres.append(nombre)
+    return nombres
+
+
+def anonimizar(estudiantes, casos, promo):
     """Reemplaza nombres por un código (E-001...) e iniciales. Mantiene intacto todo lo demás."""
     mapa = {}                                          # nombre real -> código
     for k, s in enumerate(estudiantes, start=1):
@@ -84,7 +102,8 @@ def anonimizar(estudiantes, casos):
         s["n"] = mapa[s["n"]]                          # cambia el nombre en el estudiante
         s.pop("raw", None)                             # quita el texto original (no contiene nombres, pero no se usa)
     casos = [mapa.get(c, c) for c in casos]            # aplica el mismo código en la lista de casos
-    return estudiantes, casos
+    promo = [mapa.get(c, c) for c in promo]            # y en la lista de promovidos por el comité
+    return estudiantes, casos, promo
 
 
 def main():
@@ -98,14 +117,15 @@ def main():
     estudiantes = leer_estudiantes(libro)
     casos = leer_casos(libro)
     verificar(estudiantes, libro)
+    promo = leer_promo_comite(estudiantes)
 
     if args.anonimo:
-        estudiantes, casos = anonimizar(estudiantes, casos)
+        estudiantes, casos, promo = anonimizar(estudiantes, casos, promo)
         salida = RAIZ / "index_anonimo.html"
     else:
         salida = RAIZ / "index.html"
 
-    datos = {"studs": estudiantes, "casos": casos}
+    datos = {"studs": estudiantes, "casos": casos, "promo": promo}
     (RAIZ / "data" / ("data_anonimo.json" if args.anonimo else "data.json")).write_text(
         json.dumps(datos, ensure_ascii=False, indent=1), encoding="utf-8")   # copia legible de los datos
 
