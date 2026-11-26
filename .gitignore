@@ -1,0 +1,15 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Archivos temporales de Excel (cuando el archivo está abierto)
+~$*.xlsx
+
+# Editor
+.vscode/

@@ -1,0 +1,2729 @@
+{
+ "studs": [
+  {
+   "g": "6-1",
+   "n": "CUELLAR SANCHEZ DILAN FABIAN",
+   "nb": 2,
+   "i": 20,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "HUM",
+     2.8
+    ],
+    [
+     "MATE",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 3.433,
+   "raw": "HUM: 2,8; MATE: 2,6"
+  },
+  {
+   "g": "6-1",
+   "n": "ORTIZ CUERO BRITHANY SOFIA",
+   "nb": 1,
+   "i": 5,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.REL",
+     2.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.6,
+   "raw": "E.REL: 2,8"
+  },
+  {
+   "g": "6-1",
+   "n": "PEREA RODRIGUEZ DENZEL STEVEN",
+   "nb": 1,
+   "i": 30,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     1.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.211,
+   "raw": "ED.AR: 1,8"
+  },
+  {
+   "g": "6-1",
+   "n": "SINISTERRA LEDEZMA EMMANUEL",
+   "nb": 1,
+   "i": 11,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.711,
+   "raw": "MATE: 2,8"
+  },
+  {
+   "g": "6-2",
+   "n": "GONZALEZ MALAGA HERNANDO",
+   "nb": 1,
+   "i": 7,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.633,
+   "raw": "MATE: 2,7"
+  },
+  {
+   "g": "6-2",
+   "n": "JOYAS SAMBONI JHINER SMITH",
+   "nb": 4,
+   "i": 24,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     1.5
+    ],
+    [
+     "E.EYV",
+     2.8
+    ],
+    [
+     "HUM",
+     2.4
+    ],
+    [
+     "MATE",
+     1.7
+    ]
+   ],
+   "disc": null,
+   "p": 2.822,
+   "raw": "ED.AR: 1,5; E.EYV: 2,8; HUM: 2,4; MATE: 1,7"
+  },
+  {
+   "g": "6-2",
+   "n": "MICOLTA OROBIO STEFANY",
+   "nb": 7,
+   "i": 15,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.7
+    ],
+    [
+     "E.FRD",
+     1.9
+    ],
+    [
+     "ED.AR",
+     1.1
+    ],
+    [
+     "E.EYV",
+     1.9
+    ],
+    [
+     "HUM",
+     1.8
+    ],
+    [
+     "MATE",
+     2.3
+    ],
+    [
+     "T.INF",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 2.256,
+   "raw": "C.NYA: 2,7; E.FRD: 1,9; ED.AR: 1,1; E.EYV: 1,9; HUM: 1,8; MATE: 2,3; T.INF: 2,6"
+  },
+  {
+   "g": "6-2",
+   "n": "MIRANDA CUERO LEISON ESTEVAN",
+   "nb": 7,
+   "i": 26,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     1.5
+    ],
+    [
+     "E.FRD",
+     1.7
+    ],
+    [
+     "ED.AR",
+     1.8
+    ],
+    [
+     "E.EYV",
+     2.1
+    ],
+    [
+     "HUM",
+     1.4
+    ],
+    [
+     "MATE",
+     1.7
+    ],
+    [
+     "T.INF",
+     2.2
+    ]
+   ],
+   "disc": 1.9,
+   "p": 2.233,
+   "raw": "C.NYA: 1,5; E.FRD: 1,7; ED.AR: 1,8; E.EYV: 2,1; HUM: 1,4; MATE: 1,7; T.INF: 2,2\nDISCP: 1,9 (registro adicional)"
+  },
+  {
+   "g": "6-2",
+   "n": "MONTAÑO MONTAÑO JOSE JULIAN",
+   "nb": 1,
+   "i": 7,
+   "d": "ALTO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.FRD",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 4.011,
+   "raw": "E.FRD: 2,9"
+  },
+  {
+   "g": "6-2",
+   "n": "PORTOCARRERO SOLIS MAR YURY",
+   "nb": 1,
+   "i": 2,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.933,
+   "raw": "MATE: 2,7"
+  },
+  {
+   "g": "6-2",
+   "n": "QUIÑONES TORRES JHON SEBASTIAN",
+   "nb": 7,
+   "i": 58,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     0.9
+    ],
+    [
+     "E.FRD",
+     0.8
+    ],
+    [
+     "ED.AR",
+     1.0
+    ],
+    [
+     "E.EYV",
+     1.0
+    ],
+    [
+     "HUM",
+     0.6
+    ],
+    [
+     "MATE",
+     1.4
+    ],
+    [
+     "T.INF",
+     1.0
+    ]
+   ],
+   "disc": 0.0,
+   "p": 1.444,
+   "raw": "C.NYA: 0,9; E.FRD: 0,8; ED.AR: 1,0; E.EYV: 1,0; HUM: 0,6; MATE: 1,4; T.INF: 1,0\nDISCP: 0,0 (registro adicional)"
+  },
+  {
+   "g": "6-2",
+   "n": "SAA SANCHEZ KEINER JOSE",
+   "nb": 1,
+   "i": 7,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.378,
+   "raw": "MATE: 2,7"
+  },
+  {
+   "g": "6-2",
+   "n": "SALAZAR CASTILLO JOHAN STIVEN",
+   "nb": 3,
+   "i": 25,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.7
+    ],
+    [
+     "HUM",
+     2.9
+    ],
+    [
+     "MATE",
+     2.5
+    ]
+   ],
+   "disc": null,
+   "p": 3.133,
+   "raw": "ED.AR: 2,7; HUM: 2,9; MATE: 2,5"
+  },
+  {
+   "g": "6-2",
+   "n": "SEGURA CUERO LUIS ANGEL",
+   "nb": 7,
+   "i": 22,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.5
+    ],
+    [
+     "E.FRD",
+     2.6
+    ],
+    [
+     "ED.AR",
+     1.4
+    ],
+    [
+     "E.EYV",
+     2.4
+    ],
+    [
+     "HUM",
+     1.4
+    ],
+    [
+     "MATE",
+     1.9
+    ],
+    [
+     "T.INF",
+     2.2
+    ]
+   ],
+   "disc": 1.9,
+   "p": 2.411,
+   "raw": "C.NYA: 2,5; E.FRD: 2,6; ED.AR: 1,4; E.EYV: 2,4; HUM: 1,4; MATE: 1,9; T.INF: 2,2\nDISCP: 1,9 (registro adicional)"
+  },
+  {
+   "g": "6-2",
+   "n": "SEGURA GRUESO SHAIRA DANIELA",
+   "nb": 1,
+   "i": 5,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 3.356,
+   "raw": "MATE: 2,6"
+  },
+  {
+   "g": "7-1",
+   "n": "CASTRO MURILLO ANSLY MELISSA",
+   "nb": 2,
+   "i": 11,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "HUM",
+     2.9
+    ],
+    [
+     "MATE",
+     2.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.478,
+   "raw": "HUM: 2,9; MATE: 2,8"
+  },
+  {
+   "g": "7-1",
+   "n": "CUENU HURTADO MAITE",
+   "nb": 1,
+   "i": 14,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 3.7,
+   "raw": "ED.AR: 2,6"
+  },
+  {
+   "g": "7-1",
+   "n": "CUERO CARABALI YESSID FERNANDO",
+   "nb": 3,
+   "i": 17,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.REL",
+     2.8
+    ],
+    [
+     "HUM",
+     2.9
+    ],
+    [
+     "MATE",
+     2.0
+    ]
+   ],
+   "disc": null,
+   "p": 3.344,
+   "raw": "E.REL: 2,8; HUM: 2,9; MATE: 2,0"
+  },
+  {
+   "g": "7-1",
+   "n": "GRUESO MONTAÑO YINNER STIVEN",
+   "nb": 3,
+   "i": 11,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.EYV",
+     2.0
+    ],
+    [
+     "HUM",
+     2.8
+    ],
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.344,
+   "raw": "E.EYV: 2,0; HUM: 2,8; MATE: 2,7"
+  },
+  {
+   "g": "7-1",
+   "n": "IBARBO SOLIS BERCY YULIETH",
+   "nb": 8,
+   "i": 39,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.0
+    ],
+    [
+     "E.FRD",
+     1.9
+    ],
+    [
+     "ED.AR",
+     1.0
+    ],
+    [
+     "E.EYV",
+     0.8
+    ],
+    [
+     "E.REL",
+     2.3
+    ],
+    [
+     "HUM",
+     1.5
+    ],
+    [
+     "MATE",
+     1.6
+    ],
+    [
+     "T.INF",
+     2.3
+    ]
+   ],
+   "disc": 2.4,
+   "p": 1.944,
+   "raw": "C.NYA: 2,0; E.FRD: 1,9; ED.AR: 1,0; E.EYV: 0,8; E.REL: 2,3; HUM: 1,5; MATE: 1,6; T.INF: 2,3\nDISCP: 2,4 (registro adicional)"
+  },
+  {
+   "g": "7-1",
+   "n": "ISAZA MANCILLA ELISABETH",
+   "nb": 3,
+   "i": 3,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.8
+    ],
+    [
+     "E.EYV",
+     2.3
+    ],
+    [
+     "HUM",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.289,
+   "raw": "ED.AR: 2,8; E.EYV: 2,3; HUM: 2,9"
+  },
+  {
+   "g": "7-1",
+   "n": "MANCILLA ALEGRIA DANNI MARCELA",
+   "nb": 1,
+   "i": 8,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.744,
+   "raw": "MATE: 2,9"
+  },
+  {
+   "g": "7-1",
+   "n": "MONTAÑO SEGURA SEBASTIAN",
+   "nb": 2,
+   "i": 10,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.EYV",
+     2.5
+    ],
+    [
+     "HUM",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.422,
+   "raw": "E.EYV: 2,5; HUM: 2,7"
+  },
+  {
+   "g": "7-1",
+   "n": "NARANJO GRUESO YELIANY",
+   "nb": 1,
+   "i": 16,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "HUM",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 3.389,
+   "raw": "HUM: 2,6"
+  },
+  {
+   "g": "7-1",
+   "n": "OLAYA SOLIS LAUREN DAYANA",
+   "nb": 2,
+   "i": 5,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.9
+    ],
+    [
+     "E.EYV",
+     2.5
+    ]
+   ],
+   "disc": null,
+   "p": 3.511,
+   "raw": "ED.AR: 2,9; E.EYV: 2,5"
+  },
+  {
+   "g": "7-1",
+   "n": "RIASCOS GARCIA BREYNER",
+   "nb": 2,
+   "i": 16,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.8
+    ],
+    [
+     "HUM",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.467,
+   "raw": "ED.AR: 2,8; HUM: 2,7"
+  },
+  {
+   "g": "7-1",
+   "n": "SANDOVAL TORRES CRISTIAN FERNANDO",
+   "nb": 1,
+   "i": 13,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "HUM",
+     2.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.678,
+   "raw": "HUM: 2,8"
+  },
+  {
+   "g": "7-1",
+   "n": "SEGURA CUERO JHON JARRY",
+   "nb": 3,
+   "i": 12,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.REL",
+     2.6
+    ],
+    [
+     "HUM",
+     2.7
+    ],
+    [
+     "MATE",
+     1.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.178,
+   "raw": "E.REL: 2,6; HUM: 2,7; MATE: 1,9"
+  },
+  {
+   "g": "7-1",
+   "n": "TORRES CARABALI JHON ALBEIRO",
+   "nb": 4,
+   "i": 6,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.EYV",
+     2.3
+    ],
+    [
+     "E.REL",
+     2.9
+    ],
+    [
+     "HUM",
+     2.5
+    ],
+    [
+     "MATE",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 3.1,
+   "raw": "E.EYV: 2,3; E.REL: 2,9; HUM: 2,5; MATE: 2,6"
+  },
+  {
+   "g": "7-1",
+   "n": "TORRES CUENU LILIBETH ZAMARA",
+   "nb": 1,
+   "i": 1,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.7,
+   "raw": "MATE: 2,9"
+  },
+  {
+   "g": "7-1",
+   "n": "VENTE TENORIO JOSE ISAIAS",
+   "nb": 4,
+   "i": 10,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.9
+    ],
+    [
+     "E.REL",
+     2.6
+    ],
+    [
+     "HUM",
+     2.4
+    ],
+    [
+     "MATE",
+     2.3
+    ]
+   ],
+   "disc": null,
+   "p": 3.2,
+   "raw": "C.NYA: 2,9; E.REL: 2,6; HUM: 2,4; MATE: 2,3"
+  },
+  {
+   "g": "7-2",
+   "n": "ARBOLEDA CUERO JHON WILMER",
+   "nb": 3,
+   "i": 15,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.3
+    ],
+    [
+     "E.EYV",
+     2.4
+    ],
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.389,
+   "raw": "ED.AR: 2,3; E.EYV: 2,4; MATE: 2,9"
+  },
+  {
+   "g": "7-2",
+   "n": "BOYA MONTAÑO KAREN YISEL",
+   "nb": 7,
+   "i": 33,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.FRD",
+     2.0
+    ],
+    [
+     "ED.AR",
+     1.2
+    ],
+    [
+     "E.EYV",
+     1.0
+    ],
+    [
+     "E.REL",
+     2.3
+    ],
+    [
+     "HUM",
+     2.0
+    ],
+    [
+     "MATE",
+     2.4
+    ],
+    [
+     "T.INF",
+     2.5
+    ]
+   ],
+   "disc": null,
+   "p": 2.289,
+   "raw": "E.FRD: 2,0; ED.AR: 1,2; E.EYV: 1,0; E.REL: 2,3; HUM: 2,0; MATE: 2,4; T.INF: 2,5"
+  },
+  {
+   "g": "7-2",
+   "n": "CADENA IBARBO DORIS MAYERLY",
+   "nb": 4,
+   "i": 26,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.6
+    ],
+    [
+     "E.EYV",
+     1.8
+    ],
+    [
+     "HUM",
+     2.5
+    ],
+    [
+     "MATE",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 2.967,
+   "raw": "ED.AR: 2,6; E.EYV: 1,8; HUM: 2,5; MATE: 2,6"
+  },
+  {
+   "g": "7-2",
+   "n": "CAICEDO OBANDO AYDA MELISA",
+   "nb": 4,
+   "i": 10,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.3
+    ],
+    [
+     "E.EYV",
+     2.4
+    ],
+    [
+     "HUM",
+     2.6
+    ],
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.133,
+   "raw": "ED.AR: 2,3; E.EYV: 2,4; HUM: 2,6; MATE: 2,7"
+  },
+  {
+   "g": "7-2",
+   "n": "CASTRO CUERO MAIRA ALEJANDRA",
+   "nb": 7,
+   "i": 21,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.6
+    ],
+    [
+     "E.FRD",
+     2.8
+    ],
+    [
+     "ED.AR",
+     2.3
+    ],
+    [
+     "E.EYV",
+     2.3
+    ],
+    [
+     "HUM",
+     1.8
+    ],
+    [
+     "MATE",
+     2.2
+    ],
+    [
+     "T.INF",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 2.656,
+   "raw": "C.NYA: 2,6; E.FRD: 2,8; ED.AR: 2,3; E.EYV: 2,3; HUM: 1,8; MATE: 2,2; T.INF: 2,6"
+  },
+  {
+   "g": "7-2",
+   "n": "CORTEZ ORTIZ LEONAR DUVAN",
+   "nb": 6,
+   "i": 35,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.6
+    ],
+    [
+     "ED.AR",
+     2.2
+    ],
+    [
+     "E.EYV",
+     1.5
+    ],
+    [
+     "E.REL",
+     2.9
+    ],
+    [
+     "HUM",
+     2.1
+    ],
+    [
+     "MATE",
+     2.3
+    ]
+   ],
+   "disc": null,
+   "p": 2.556,
+   "raw": "C.NYA: 2,6; ED.AR: 2,2; E.EYV: 1,5; E.REL: 2,9; HUM: 2,1; MATE: 2,3"
+  },
+  {
+   "g": "7-2",
+   "n": "CUENU RODRIGUEZ YOHAN SEBASTIAN",
+   "nb": 5,
+   "i": 19,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     1.9
+    ],
+    [
+     "ED.AR",
+     2.7
+    ],
+    [
+     "E.EYV",
+     2.5
+    ],
+    [
+     "HUM",
+     2.8
+    ],
+    [
+     "MATE",
+     2.4
+    ]
+   ],
+   "disc": null,
+   "p": 3.122,
+   "raw": "C.NYA: 1,9; ED.AR: 2,7; E.EYV: 2,5; HUM: 2,8; MATE: 2,4"
+  },
+  {
+   "g": "7-2",
+   "n": "GRUESO SEGURA YEISON DAVID",
+   "nb": 3,
+   "i": 12,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.0
+    ],
+    [
+     "E.EYV",
+     2.3
+    ],
+    [
+     "HUM",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.289,
+   "raw": "ED.AR: 2,0; E.EYV: 2,3; HUM: 2,7"
+  },
+  {
+   "g": "7-2",
+   "n": "MICOLTA OROBIO ANGIE",
+   "nb": 6,
+   "i": 26,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.9
+    ],
+    [
+     "E.FRD",
+     2.6
+    ],
+    [
+     "ED.AR",
+     1.8
+    ],
+    [
+     "E.EYV",
+     1.5
+    ],
+    [
+     "HUM",
+     2.4
+    ],
+    [
+     "MATE",
+     1.9
+    ]
+   ],
+   "disc": null,
+   "p": 2.6,
+   "raw": "C.NYA: 2,9; E.FRD: 2,6; ED.AR: 1,8; E.EYV: 1,5; HUM: 2,4; MATE: 1,9"
+  },
+  {
+   "g": "7-2",
+   "n": "MICOLTA OROBIO JOHANA",
+   "nb": 7,
+   "i": 27,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.8
+    ],
+    [
+     "E.FRD",
+     2.9
+    ],
+    [
+     "ED.AR",
+     1.2
+    ],
+    [
+     "E.EYV",
+     1.0
+    ],
+    [
+     "HUM",
+     1.9
+    ],
+    [
+     "MATE",
+     1.9
+    ],
+    [
+     "T.INF",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 2.389,
+   "raw": "C.NYA: 2,8; E.FRD: 2,9; ED.AR: 1,2; E.EYV: 1,0; HUM: 1,9; MATE: 1,9; T.INF: 2,7"
+  },
+  {
+   "g": "7-2",
+   "n": "OCORO CUNDUMI YIDWAR",
+   "nb": 4,
+   "i": 10,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.EYV",
+     2.4
+    ],
+    [
+     "E.REL",
+     2.9
+    ],
+    [
+     "HUM",
+     2.8
+    ],
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.2,
+   "raw": "E.EYV: 2,4; E.REL: 2,9; HUM: 2,8; MATE: 2,9"
+  },
+  {
+   "g": "7-2",
+   "n": "OROBIO SINISTERRA CECILIA LORENA",
+   "nb": 8,
+   "i": 30,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.9
+    ],
+    [
+     "E.FRD",
+     1.4
+    ],
+    [
+     "ED.AR",
+     1.2
+    ],
+    [
+     "E.EYV",
+     1.0
+    ],
+    [
+     "E.REL",
+     2.0
+    ],
+    [
+     "HUM",
+     2.0
+    ],
+    [
+     "MATE",
+     1.9
+    ],
+    [
+     "T.INF",
+     2.0
+    ]
+   ],
+   "disc": null,
+   "p": 2.056,
+   "raw": "C.NYA: 2,9; E.FRD: 1,4; ED.AR: 1,2; E.EYV: 1,0; E.REL: 2,0; HUM: 2,0; MATE: 1,9; T.INF: 2,0"
+  },
+  {
+   "g": "7-2",
+   "n": "PERLAZA FLORES CARLOS MARIO",
+   "nb": 2,
+   "i": 25,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.9
+    ],
+    [
+     "E.EYV",
+     1.6
+    ]
+   ],
+   "disc": null,
+   "p": 3.211,
+   "raw": "ED.AR: 2,9; E.EYV: 1,6"
+  },
+  {
+   "g": "7-2",
+   "n": "PUENTES VELASCO SHAIRA ALEJANDRA",
+   "nb": 7,
+   "i": 26,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.6
+    ],
+    [
+     "E.FRD",
+     2.7
+    ],
+    [
+     "ED.AR",
+     2.0
+    ],
+    [
+     "E.EYV",
+     1.3
+    ],
+    [
+     "E.REL",
+     2.8
+    ],
+    [
+     "HUM",
+     2.6
+    ],
+    [
+     "MATE",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 2.633,
+   "raw": "C.NYA: 2,6; E.FRD: 2,7; ED.AR: 2,0; E.EYV: 1,3; E.REL: 2,8; HUM: 2,6; MATE: 2,6"
+  },
+  {
+   "g": "7-2",
+   "n": "QUINTERO RIASCOS KATERIN LLAJAIRA",
+   "nb": 1,
+   "i": 18,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.FRD",
+     2.5
+    ]
+   ],
+   "disc": null,
+   "p": 3.767,
+   "raw": "E.FRD: 2,5"
+  },
+  {
+   "g": "7-2",
+   "n": "SEGURA ESTUPIÑAN FLOR ESTEFANI",
+   "nb": 5,
+   "i": 28,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.FRD",
+     2.9
+    ],
+    [
+     "ED.AR",
+     2.3
+    ],
+    [
+     "E.EYV",
+     2.5
+    ],
+    [
+     "HUM",
+     2.3
+    ],
+    [
+     "MATE",
+     2.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.033,
+   "raw": "E.FRD: 2,9; ED.AR: 2,3; E.EYV: 2,5; HUM: 2,3; MATE: 2,8"
+  },
+  {
+   "g": "7-2",
+   "n": "SOLIS COLORADO ERICA ALEXANDRA",
+   "nb": 3,
+   "i": 8,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.1
+    ],
+    [
+     "E.EYV",
+     1.9
+    ],
+    [
+     "MATE",
+     2.1
+    ]
+   ],
+   "disc": null,
+   "p": 2.944,
+   "raw": "ED.AR: 2,1; E.EYV: 1,9; MATE: 2,1"
+  },
+  {
+   "g": "7-2",
+   "n": "SOLIS LERMA WENDY NIKOL",
+   "nb": 3,
+   "i": 28,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.1
+    ],
+    [
+     "E.EYV",
+     2.8
+    ],
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.3,
+   "raw": "ED.AR: 2,1; E.EYV: 2,8; MATE: 2,7"
+  },
+  {
+   "g": "7-2",
+   "n": "VERGARA PEREA MARIA CAMILA",
+   "nb": 7,
+   "i": 39,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     1.9
+    ],
+    [
+     "E.FRD",
+     2.8
+    ],
+    [
+     "ED.AR",
+     1.7
+    ],
+    [
+     "E.EYV",
+     1.3
+    ],
+    [
+     "HUM",
+     2.1
+    ],
+    [
+     "MATE",
+     1.9
+    ],
+    [
+     "T.INF",
+     2.4
+    ]
+   ],
+   "disc": null,
+   "p": 2.356,
+   "raw": "C.NYA: 1,9; E.FRD: 2,8; ED.AR: 1,7; E.EYV: 1,3; HUM: 2,1; MATE: 1,9; T.INF: 2,4"
+  },
+  {
+   "g": "8-1",
+   "n": "ARAGON OCORO JOEL SANTIAGO",
+   "nb": 1,
+   "i": 16,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.967,
+   "raw": "MATE: 2,9"
+  },
+  {
+   "g": "8-1",
+   "n": "ARBOLEDA MORENO JUAN FELIPE",
+   "nb": 2,
+   "i": 13,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.SOC",
+     2.7
+    ],
+    [
+     "MATE",
+     2.4
+    ]
+   ],
+   "disc": null,
+   "p": 3.344,
+   "raw": "C.SOC: 2,7; MATE: 2,4"
+  },
+  {
+   "g": "8-1",
+   "n": "GONZALEZ RODRIGUEZ ANA MARIA",
+   "nb": 3,
+   "i": 28,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.9
+    ],
+    [
+     "HUM",
+     2.0
+    ],
+    [
+     "MATE",
+     2.4
+    ]
+   ],
+   "disc": null,
+   "p": 3.433,
+   "raw": "C.NYA: 2,9; HUM: 2,0; MATE: 2,4"
+  },
+  {
+   "g": "8-1",
+   "n": "IZQUIERDO HINESTROZA CARMEN LIZETH",
+   "nb": 3,
+   "i": 35,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.8
+    ],
+    [
+     "HUM",
+     2.9
+    ],
+    [
+     "MATE",
+     2.4
+    ]
+   ],
+   "disc": null,
+   "p": 3.6,
+   "raw": "ED.AR: 2,8; HUM: 2,9; MATE: 2,4"
+  },
+  {
+   "g": "8-1",
+   "n": "MADARIAGA RODRIGUEZ BAIRON STIVEN",
+   "nb": 1,
+   "i": 11,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "HUM",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.811,
+   "raw": "HUM: 2,7"
+  },
+  {
+   "g": "8-1",
+   "n": "MANCILLA VALENCIA JOSUE ALDEMAR",
+   "nb": 1,
+   "i": 16,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.833,
+   "raw": "MATE: 2,9"
+  },
+  {
+   "g": "8-1",
+   "n": "OBANDO CASTILLO HEILYN MARIANA",
+   "nb": 9,
+   "i": 72,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     1.0
+    ],
+    [
+     "C.SOC",
+     1.0
+    ],
+    [
+     "E.FRD",
+     1.0
+    ],
+    [
+     "ED.AR",
+     0.8
+    ],
+    [
+     "E.EYV",
+     2.3
+    ],
+    [
+     "E.REL",
+     2.3
+    ],
+    [
+     "HUM",
+     0.7
+    ],
+    [
+     "MATE",
+     1.0
+    ],
+    [
+     "T.INF",
+     1.4
+    ]
+   ],
+   "disc": 0.5,
+   "p": 1.278,
+   "raw": "C.NYA: 1,0; C.SOC: 1,0; E.FRD: 1,0; ED.AR: 0,8; E.EYV: 2,3; E.REL: 2,3; HUM: 0,7; MATE: 1,0; T.INF: 1,4\nDISCP: 0,5 (registro adicional)"
+  },
+  {
+   "g": "8-1",
+   "n": "OBREGON ORDOÑEZ ERLYN MARIA",
+   "nb": 2,
+   "i": 18,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "HUM",
+     2.3
+    ],
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.433,
+   "raw": "HUM: 2,3; MATE: 2,9"
+  },
+  {
+   "g": "8-1",
+   "n": "OROBIO SINISTERRA KELLY ANDREA",
+   "nb": 3,
+   "i": 14,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.7
+    ],
+    [
+     "HUM",
+     2.1
+    ],
+    [
+     "MATE",
+     2.3
+    ]
+   ],
+   "disc": null,
+   "p": 3.3,
+   "raw": "ED.AR: 2,7; HUM: 2,1; MATE: 2,3"
+  },
+  {
+   "g": "8-1",
+   "n": "PERLAZA LERMA VALENTINA",
+   "nb": 2,
+   "i": 18,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "HUM",
+     2.8
+    ],
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.589,
+   "raw": "HUM: 2,8; MATE: 2,9"
+  },
+  {
+   "g": "8-1",
+   "n": "PRETEL GOMEZ SARAH",
+   "nb": 7,
+   "i": 18,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     1.9
+    ],
+    [
+     "C.SOC",
+     2.2
+    ],
+    [
+     "E.FRD",
+     2.3
+    ],
+    [
+     "ED.AR",
+     2.0
+    ],
+    [
+     "HUM",
+     1.7
+    ],
+    [
+     "MATE",
+     2.1
+    ],
+    [
+     "T.INF",
+     2.4
+    ]
+   ],
+   "disc": 2.7,
+   "p": 2.322,
+   "raw": "C.NYA: 1,9; C.SOC: 2,2; E.FRD: 2,3; ED.AR: 2,0; HUM: 1,7; MATE: 2,1; T.INF: 2,4\nDISCP: 2,7 (registro adicional)"
+  },
+  {
+   "g": "8-1",
+   "n": "REBOLLEDO ROMERO MICHAEL STIVEN",
+   "nb": 1,
+   "i": 13,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.789,
+   "raw": "MATE: 2,9"
+  },
+  {
+   "g": "8-1",
+   "n": "TORRES PORTOCARRERO EMMANUEL",
+   "nb": 1,
+   "i": 6,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.7,
+   "raw": "MATE: 2,7"
+  },
+  {
+   "g": "8-1",
+   "n": "VENTE RUIZ JADY SELENA",
+   "nb": 1,
+   "i": 8,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.778,
+   "raw": "MATE: 2,9"
+  },
+  {
+   "g": "8-2",
+   "n": "BETANCOURT SOLIS KAROL NICOLE",
+   "nb": 4,
+   "i": 7,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.9
+    ],
+    [
+     "ED.AR",
+     2.9
+    ],
+    [
+     "E.REL",
+     2.9
+    ],
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.1,
+   "raw": "C.NYA: 2,9; ED.AR: 2,9; E.REL: 2,9; MATE: 2,7"
+  },
+  {
+   "g": "8-2",
+   "n": "CUERO HINESTROZA KAREN VANESSA",
+   "nb": 8,
+   "i": 6,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.8
+    ],
+    [
+     "C.SOC",
+     2.6
+    ],
+    [
+     "E.FRD",
+     2.5
+    ],
+    [
+     "ED.AR",
+     1.8
+    ],
+    [
+     "E.EYV",
+     2.6
+    ],
+    [
+     "HUM",
+     1.9
+    ],
+    [
+     "MATE",
+     1.4
+    ],
+    [
+     "T.INF",
+     2.3
+    ]
+   ],
+   "disc": 2.5,
+   "p": 2.322,
+   "raw": "C.NYA: 2,8; C.SOC: 2,6; E.FRD: 2,5; ED.AR: 1,8; E.EYV: 2,6; HUM: 1,9; MATE: 1,4; T.INF: 2,3\nDISCP: 2,5 (registro adicional)"
+  },
+  {
+   "g": "8-2",
+   "n": "CUNDUMI RENGIFO JEFERSON",
+   "nb": 9,
+   "i": 4,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     0.9
+    ],
+    [
+     "C.SOC",
+     1.0
+    ],
+    [
+     "E.FRD",
+     1.0
+    ],
+    [
+     "ED.AR",
+     0.8
+    ],
+    [
+     "E.EYV",
+     2.3
+    ],
+    [
+     "E.REL",
+     2.3
+    ],
+    [
+     "HUM",
+     1.2
+    ],
+    [
+     "MATE",
+     0.9
+    ],
+    [
+     "T.INF",
+     1.0
+    ]
+   ],
+   "disc": 1.0,
+   "p": 1.267,
+   "raw": "C.NYA: 0,9; C.SOC: 1,0; E.FRD: 1,0; ED.AR: 0,8; E.EYV: 2,3; E.REL: 2,3; HUM: 1,2; MATE: 0,9; T.INF: 1,0\nDISCP: 1,0 (registro adicional)"
+  },
+  {
+   "g": "8-2",
+   "n": "MONTAÑO ARBOLEDA DENNY GISELTH",
+   "nb": 9,
+   "i": 4,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.1
+    ],
+    [
+     "C.SOC",
+     2.4
+    ],
+    [
+     "E.FRD",
+     2.2
+    ],
+    [
+     "ED.AR",
+     1.7
+    ],
+    [
+     "E.EYV",
+     2.6
+    ],
+    [
+     "E.REL",
+     2.7
+    ],
+    [
+     "HUM",
+     1.8
+    ],
+    [
+     "MATE",
+     1.5
+    ],
+    [
+     "T.INF",
+     2.5
+    ]
+   ],
+   "disc": 2.5,
+   "p": 2.167,
+   "raw": "C.NYA: 2,1; C.SOC: 2,4; E.FRD: 2,2; ED.AR: 1,7; E.EYV: 2,6; E.REL: 2,7; HUM: 1,8; MATE: 1,5; T.INF: 2,5\nDISCP: 2,5 (registro adicional)"
+  },
+  {
+   "g": "8-2",
+   "n": "OREJUELA HURTADO ERICK FABIAN",
+   "nb": 1,
+   "i": 7,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.4
+    ]
+   ],
+   "disc": null,
+   "p": 3.511,
+   "raw": "ED.AR: 2,4"
+  },
+  {
+   "g": "8-2",
+   "n": "OROBIO MANCILLA MERLIN YULIETH",
+   "nb": 2,
+   "i": 2,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.9
+    ],
+    [
+     "HUM",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.578,
+   "raw": "ED.AR: 2,9; HUM: 2,7"
+  },
+  {
+   "g": "8-2",
+   "n": "PERLAZA SOLIS FLOR ESNEIDA",
+   "nb": 1,
+   "i": 17,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.5
+    ]
+   ],
+   "disc": null,
+   "p": 3.633,
+   "raw": "ED.AR: 2,5"
+  },
+  {
+   "g": "8-2",
+   "n": "RODRIGUEZ BANGUERA JUAN SEBASTIAN",
+   "nb": 1,
+   "i": 4,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.4
+    ]
+   ],
+   "disc": null,
+   "p": 3.5,
+   "raw": "MATE: 2,4"
+  },
+  {
+   "g": "8-2",
+   "n": "SOLIS CAICEDO LEIDY YURANY",
+   "nb": 1,
+   "i": 1,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.8,
+   "raw": "MATE: 2,8"
+  },
+  {
+   "g": "8-2",
+   "n": "VELASQUEZ GUERRERO YULEIDY",
+   "nb": 2,
+   "i": 11,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "HUM",
+     2.4
+    ],
+    [
+     "MATE",
+     2.2
+    ]
+   ],
+   "disc": null,
+   "p": 3.433,
+   "raw": "HUM: 2,4; MATE: 2,2"
+  },
+  {
+   "g": "9-1",
+   "n": "CARVAJAL ALEGRIA JORDY SANTIAGO",
+   "nb": 8,
+   "i": 5,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     1.9
+    ],
+    [
+     "C.SOC",
+     1.7
+    ],
+    [
+     "E.FRD",
+     1.9
+    ],
+    [
+     "ED.AR",
+     1.3
+    ],
+    [
+     "E.REL",
+     2.7
+    ],
+    [
+     "HUM",
+     1.7
+    ],
+    [
+     "MATE",
+     1.6
+    ],
+    [
+     "T.INF",
+     1.8
+    ]
+   ],
+   "disc": null,
+   "p": 1.967,
+   "raw": "C.NYA: 1,9; C.SOC: 1,7; E.FRD: 1,9; ED.AR: 1,3; E.REL: 2,7; HUM: 1,7; MATE: 1,6; T.INF: 1,8"
+  },
+  {
+   "g": "9-1",
+   "n": "CUNDUMI MARTINEZ OMAR STIVEN",
+   "nb": 5,
+   "i": 5,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.6
+    ],
+    [
+     "ED.AR",
+     1.7
+    ],
+    [
+     "E.REL",
+     2.1
+    ],
+    [
+     "HUM",
+     2.2
+    ],
+    [
+     "MATE",
+     2.2
+    ]
+   ],
+   "disc": null,
+   "p": 2.689,
+   "raw": "C.NYA: 2,6; ED.AR: 1,7; E.REL: 2,1; HUM: 2,2; MATE: 2,2"
+  },
+  {
+   "g": "9-1",
+   "n": "VALLECILLA MURILLO SANTIAGO",
+   "nb": 1,
+   "i": 0,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.967,
+   "raw": "ED.AR: 2,9"
+  },
+  {
+   "g": "9-2",
+   "n": "CASTRO CUERO DIANA MARCELA",
+   "nb": 7,
+   "i": 2,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.5
+    ],
+    [
+     "C.SOC",
+     2.7
+    ],
+    [
+     "E.FRD",
+     2.5
+    ],
+    [
+     "ED.AR",
+     2.4
+    ],
+    [
+     "HUM",
+     2.4
+    ],
+    [
+     "MATE",
+     2.2
+    ],
+    [
+     "T.INF",
+     2.8
+    ]
+   ],
+   "disc": null,
+   "p": 2.8,
+   "raw": "C.NYA: 2,5; C.SOC: 2,7; E.FRD: 2,5; ED.AR: 2,4; HUM: 2,4; MATE: 2,2; T.INF: 2,8"
+  },
+  {
+   "g": "9-2",
+   "n": "GRUESO VELASCO JOSE LUIS",
+   "nb": 2,
+   "i": 10,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "HUM",
+     2.4
+    ],
+    [
+     "MATE",
+     2.4
+    ]
+   ],
+   "disc": null,
+   "p": 3.156,
+   "raw": "HUM: 2,4; MATE: 2,4"
+  },
+  {
+   "g": "9-2",
+   "n": "ILLERAS MANCILLA SAMUEL ANDRES",
+   "nb": 3,
+   "i": 4,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.7
+    ],
+    [
+     "HUM",
+     2.6
+    ],
+    [
+     "MATE",
+     2.0
+    ]
+   ],
+   "disc": null,
+   "p": 3.033,
+   "raw": "ED.AR: 2,7; HUM: 2,6; MATE: 2,0"
+  },
+  {
+   "g": "9-2",
+   "n": "MAFLA GRUESO CHAYRA MILAGRO",
+   "nb": 2,
+   "i": 6,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.8
+    ],
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.389,
+   "raw": "ED.AR: 2,8; MATE: 2,9"
+  },
+  {
+   "g": "9-2",
+   "n": "MANCILLA HURTADO JAVIER",
+   "nb": 3,
+   "i": 16,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.8
+    ],
+    [
+     "HUM",
+     2.7
+    ],
+    [
+     "MATE",
+     2.3
+    ]
+   ],
+   "disc": null,
+   "p": 3.289,
+   "raw": "ED.AR: 2,8; HUM: 2,7; MATE: 2,3"
+  },
+  {
+   "g": "9-2",
+   "n": "MONTAÑO GOMEZ SHAILY SOFIA",
+   "nb": 4,
+   "i": 5,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "E.FRD",
+     2.6
+    ],
+    [
+     "ED.AR",
+     2.7
+    ],
+    [
+     "HUM",
+     2.3
+    ],
+    [
+     "MATE",
+     1.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.022,
+   "raw": "E.FRD: 2,6; ED.AR: 2,7; HUM: 2,3; MATE: 1,8"
+  },
+  {
+   "g": "9-2",
+   "n": "RUIZ SOLIS SHARON DAYANA",
+   "nb": 8,
+   "i": 8,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.7
+    ],
+    [
+     "C.SOC",
+     2.9
+    ],
+    [
+     "E.FRD",
+     2.3
+    ],
+    [
+     "ED.AR",
+     2.2
+    ],
+    [
+     "E.EYV",
+     2.9
+    ],
+    [
+     "E.REL",
+     2.9
+    ],
+    [
+     "HUM",
+     1.9
+    ],
+    [
+     "MATE",
+     1.9
+    ]
+   ],
+   "disc": null,
+   "p": 2.533,
+   "raw": "C.NYA: 2,7; C.SOC: 2,9; E.FRD: 2,3; ED.AR: 2,2; E.EYV: 2,9; E.REL: 2,9; HUM: 1,9; MATE: 1,9"
+  },
+  {
+   "g": "9-2",
+   "n": "TORRES VIAFARA JHON DELVI",
+   "nb": 2,
+   "i": 6,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.8
+    ],
+    [
+     "MATE",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 3.522,
+   "raw": "ED.AR: 2,8; MATE: 2,6"
+  },
+  {
+   "g": "9-2",
+   "n": "VIDAL OBREGON MARIA ISABEL",
+   "nb": 9,
+   "i": 6,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     1.0
+    ],
+    [
+     "C.SOC",
+     1.4
+    ],
+    [
+     "E.FRD",
+     0.8
+    ],
+    [
+     "ED.AR",
+     0.9
+    ],
+    [
+     "E.EYV",
+     2.8
+    ],
+    [
+     "E.REL",
+     2.9
+    ],
+    [
+     "HUM",
+     0.9
+    ],
+    [
+     "MATE",
+     0.8
+    ],
+    [
+     "T.INF",
+     0.8
+    ]
+   ],
+   "disc": 0.8,
+   "p": 1.367,
+   "raw": "C.NYA: 1,0; C.SOC: 1,4; E.FRD: 0,8; ED.AR: 0,9; E.EYV: 2,8; E.REL: 2,9; HUM: 0,9; MATE: 0,8; T.INF: 0,8\nDISCP: 0,8 (registro adicional)"
+  },
+  {
+   "g": "10-1",
+   "n": "ALOMIA LEDEZMA JHONATAN NOE",
+   "nb": 6,
+   "i": 0,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.0
+    ],
+    [
+     "E.FRD",
+     2.5
+    ],
+    [
+     "ED.AR",
+     2.6
+    ],
+    [
+     "HUM",
+     1.9
+    ],
+    [
+     "MATE",
+     2.1
+    ],
+    [
+     "Área sin rótulo (col. M)",
+     2.7
+    ]
+   ],
+   "disc": 2.6,
+   "p": 2.63,
+   "raw": "C.NYA: 2,0; E.FRD: 2,5; ED.AR: 2,6; HUM: 1,9; MATE: 2,1; Área sin rótulo (col. M): 2,7\nDISCP: 2,6 (registro adicional)"
+  },
+  {
+   "g": "10-1",
+   "n": "BETANCOURT SOLIS BEINER DANIEL",
+   "nb": 3,
+   "i": 13,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.9
+    ],
+    [
+     "ED.AR",
+     2.5
+    ],
+    [
+     "HUM",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.31,
+   "raw": "C.NYA: 2,9; ED.AR: 2,5; HUM: 2,7"
+  },
+  {
+   "g": "10-1",
+   "n": "GRUESO HERNANDEZ MAILYN YURANNY",
+   "nb": 10,
+   "i": 10,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     1.0
+    ],
+    [
+     "C.SOC",
+     2.2
+    ],
+    [
+     "E.FRD",
+     1.0
+    ],
+    [
+     "ED.AR",
+     1.0
+    ],
+    [
+     "E.EYV",
+     2.9
+    ],
+    [
+     "E.REL",
+     2.3
+    ],
+    [
+     "HUM",
+     1.0
+    ],
+    [
+     "MATE",
+     1.0
+    ],
+    [
+     "T.INF",
+     1.0
+    ],
+    [
+     "Área sin rótulo (col. M)",
+     1.3
+    ]
+   ],
+   "disc": 2.6,
+   "p": 1.47,
+   "raw": "C.NYA: 1,0; C.SOC: 2,2; E.FRD: 1,0; ED.AR: 1,0; E.EYV: 2,9; E.REL: 2,3; HUM: 1,0; MATE: 1,0; T.INF: 1,0; Área sin rótulo (col. M): 1,3\nDISCP: 2,6 (registro adicional)"
+  },
+  {
+   "g": "10-1",
+   "n": "GRUESO VIAFARA LEISSY LILIANA",
+   "nb": 1,
+   "i": 7,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.75,
+   "raw": "MATE: 2,7"
+  },
+  {
+   "g": "10-1",
+   "n": "HINCAPIE CARDONA KAROL DAYANA",
+   "nb": 8,
+   "i": 0,
+   "d": "BAJO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.4
+    ],
+    [
+     "E.FRD",
+     1.9
+    ],
+    [
+     "ED.AR",
+     1.6
+    ],
+    [
+     "E.EYV",
+     2.9
+    ],
+    [
+     "HUM",
+     2.0
+    ],
+    [
+     "MATE",
+     2.5
+    ],
+    [
+     "T.INF",
+     2.0
+    ],
+    [
+     "Área sin rótulo (col. M)",
+     1.9
+    ]
+   ],
+   "disc": 2.6,
+   "p": 2.35,
+   "raw": "C.NYA: 2,4; E.FRD: 1,9; ED.AR: 1,6; E.EYV: 2,9; HUM: 2,0; MATE: 2,5; T.INF: 2,0; Área sin rótulo (col. M): 1,9\nDISCP: 2,6 (registro adicional)"
+  },
+  {
+   "g": "10-1",
+   "n": "MARTINEZ RUIZ JAIDER YOHAN",
+   "nb": 3,
+   "i": 15,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.9
+    ],
+    [
+     "ED.AR",
+     2.4
+    ],
+    [
+     "MATE",
+     2.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.16,
+   "raw": "C.NYA: 2,9; ED.AR: 2,4; MATE: 2,8"
+  },
+  {
+   "g": "10-1",
+   "n": "MONTAÑO CORTEZ HENRY FERNEY",
+   "nb": 1,
+   "i": 6,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.72,
+   "raw": "MATE: 2,7"
+  },
+  {
+   "g": "10-1",
+   "n": "SINISTERRA MONTAÑO GEAN CARLOS",
+   "nb": 1,
+   "i": 12,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.9
+    ]
+   ],
+   "disc": null,
+   "p": 3.8,
+   "raw": "MATE: 2,9"
+  },
+  {
+   "g": "10-1",
+   "n": "SINISTERRA OLAYA MAIRON ENRIQUE",
+   "nb": 1,
+   "i": 10,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.8
+    ]
+   ],
+   "disc": null,
+   "p": 3.75,
+   "raw": "MATE: 2,8"
+  },
+  {
+   "g": "10-1",
+   "n": "VIVEROS CASTRO FARID URIEL",
+   "nb": 1,
+   "i": 3,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "MATE",
+     2.7
+    ]
+   ],
+   "disc": null,
+   "p": 3.78,
+   "raw": "MATE: 2,7"
+  },
+  {
+   "g": "11-1",
+   "n": "MEZA HURTADO SHARON YULIANA",
+   "nb": 4,
+   "i": 11,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.5
+    ],
+    [
+     "ED.AR",
+     2.2
+    ],
+    [
+     "HUM",
+     2.3
+    ],
+    [
+     "MATE",
+     2.3
+    ]
+   ],
+   "disc": null,
+   "p": 3.08,
+   "raw": "C.NYA: 2,5; ED.AR: 2,2; HUM: 2,3; MATE: 2,3"
+  },
+  {
+   "g": "11-1",
+   "n": "PAREDES LEDEZMA ANA MARIA",
+   "nb": 4,
+   "i": 3,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "C.NYA",
+     2.5
+    ],
+    [
+     "ED.AR",
+     2.1
+    ],
+    [
+     "HUM",
+     2.7
+    ],
+    [
+     "MATE",
+     2.1
+    ]
+   ],
+   "disc": null,
+   "p": 3.1,
+   "raw": "C.NYA: 2,5; ED.AR: 2,1; HUM: 2,7; MATE: 2,1"
+  },
+  {
+   "g": "11-1",
+   "n": "ROSENDO SINISTERRA JESUS DANIEL",
+   "nb": 2,
+   "i": 3,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.4
+    ],
+    [
+     "MATE",
+     2.5
+    ]
+   ],
+   "disc": null,
+   "p": 3.4,
+   "raw": "ED.AR: 2,4; MATE: 2,5"
+  },
+  {
+   "g": "11-1",
+   "n": "VALLECILLA OBREGON YEFRY DUVAN",
+   "nb": 1,
+   "i": 3,
+   "d": "BASICO",
+   "e": "REPROBO",
+   "a": [
+    [
+     "ED.AR",
+     2.6
+    ]
+   ],
+   "disc": null,
+   "p": 3.56,
+   "raw": "ED.AR: 2,6"
+  }
+ ],
+ "casos": [
+  "SINISTERRA LEDEZMA EMMANUEL",
+  "MONTAÑO MONTAÑO JOSE JULIAN",
+  "MANCILLA ALEGRIA DANNI MARCELA",
+  "ARAGON OCORO JOEL SANTIAGO",
+  "MANCILLA VALENCIA JOSUE ALDEMAR",
+  "REBOLLEDO ROMERO MICHAEL STIVEN",
+  "VENTE RUIZ JADY SELENA",
+  "SOLIS CAICEDO LEIDY YURANY",
+  "VALLECILLA MURILLO SANTIAGO",
+  "SINISTERRA MONTAÑO GEAN CARLOS",
+  "SINISTERRA OLAYA MAIRON ENRIQUE"
+ ]
+}

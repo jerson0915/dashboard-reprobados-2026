@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard de reprobación · Secundaria 2026 · I.E. San Pedro y San Pablo</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f6f7f9; --surface:#ffffff; --surface-2:#f1f3f6; --border:#e3e6eb;
+  --text:#191919; --text-2:#5f6670; --text-3:#8a919b;
+  /* Colores institucionales: verde, dorado y rojo del escudo */
+  --inst-green:#0f5c2e; --inst-green-2:#1d7a3e; --inst-gold:#d4a62a; --inst-gold-2:#f3e2a6; --inst-red:#c0261c;
+  --accent:#1d7a3e; --accent-soft:#e7f3ea; --muted:#d3d9d4;
+  --bajo:#c0261c; --basico:#b8860b; --alto:#1d7a3e;
+  --seq-1:#e7f3ea; --seq-2:#b7dbc0; --seq-3:#7cbd8d; --seq-4:#3f9a5a; --seq-5:#1d7a3e; --seq-6:#0f4d26;
+  --crit:#dc3c3d; --warn:#fbb315; --good:#0aac23;
+  --grid:#eceef2;
+  --shadow:0 1px 2px rgba(16,24,40,.04),0 1px 3px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme: dark;
+    --bg:#111214; --surface:#191919; --surface-2:#222326; --border:#2e3034;
+    --text:#efefef; --text-2:#a4a9b0; --text-3:#7d838b;
+    --inst-green:#0f5c2e; --inst-green-2:#3f9a5a; --inst-gold:#e0b84a; --inst-gold-2:#4a3d17; --inst-red:#e05a4f;
+    --accent:#4fae6b; --accent-soft:#17301f; --muted:#3c4046;
+    --bajo:#e05a4f; --basico:#e0b84a; --alto:#4fae6b;
+    --seq-1:#17301f; --seq-2:#1f5a33; --seq-3:#2b7a45; --seq-4:#4fae6b; --seq-5:#8fcc9f; --seq-6:#c9e8d1;
+    --grid:#26282c; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+    color-scheme: dark;
+    --bg:#111214; --surface:#191919; --surface-2:#222326; --border:#2e3034;
+    --text:#efefef; --text-2:#a4a9b0; --text-3:#7d838b;
+    --inst-green:#0f5c2e; --inst-green-2:#3f9a5a; --inst-gold:#e0b84a; --inst-gold-2:#4a3d17; --inst-red:#e05a4f;
+    --accent:#4fae6b; --accent-soft:#17301f; --muted:#3c4046;
+    --bajo:#e05a4f; --basico:#e0b84a; --alto:#4fae6b;
+    --seq-1:#17301f; --seq-2:#1f5a33; --seq-3:#2b7a45; --seq-4:#4fae6b; --seq-5:#8fcc9f; --seq-6:#c9e8d1;
+    --grid:#26282c; --shadow:none;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1280px;margin:0 auto;padding:20px 20px 48px}
+header.top{position:relative;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding:18px 22px 18px;margin-bottom:8px;border-radius:14px;color:#fff;
+  background:linear-gradient(120deg,var(--inst-green) 0%,#13703a 60%,#1a8645 100%);box-shadow:var(--shadow);overflow:hidden}
+header.top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--inst-gold) 0 70%,var(--inst-red) 70% 100%)}
+header.top .brand{display:flex;align-items:center;gap:16px;min-width:0}
+header.top .escudo{width:72px;height:auto;flex:none;filter:drop-shadow(0 2px 4px rgba(0,0,0,.25))}
+header.top .eyebrow{color:#f3e2a6}
+header.top h1{color:#fff}
+header.top .sub{color:rgba(255,255,255,.82)}
+header.top .lema{font-style:italic;color:#f3e2a6;font-size:12px;margin-top:2px}
+header.top button{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35);color:#fff}
+header.top button:hover{background:rgba(255,255,255,.22)}
+header.top .badge{background:rgba(255,255,255,.95);color:#5f1410;border-color:transparent}
+.eyebrow{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);font-weight:600}
+h1{font-size:24px;line-height:1.2;margin:4px 0 4px;font-weight:700;letter-spacing:-.01em}
+.sub{color:var(--text-2);font-size:13px}
+.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--text-2)}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:var(--crit)}
+.top-actions{display:flex;gap:8px;align-items:center}
+button,.btn{font:inherit;cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:8px;padding:6px 12px;font-size:13px}
+button:hover{border-color:var(--text-3)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Filters */
+.filters{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);padding:10px 0 12px;margin-bottom:8px;border-bottom:1px solid var(--border)}
+.frow{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.flabel{font-size:12px;color:var(--text-2);font-weight:600;margin-right:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border-radius:999px;padding:5px 12px;font-size:13px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip.all[aria-pressed="true"]{background:var(--inst-green);border-color:var(--inst-green);color:#fff}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;border-radius:0;padding:5px 10px;border-right:1px solid var(--border)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);font-weight:600}
+input[type=search]{font:inherit;font-size:13px;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);min-width:220px}
+.fsum{font-size:12px;color:var(--text-2);margin-top:8px}
+
+/* KPIs */
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:16px 0}
+.kpi{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--inst-gold);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.kpi.hl{border-top-color:var(--inst-red)}
+.kpi .v{color:var(--inst-green)}
+:root[data-theme="dark"] .kpi .v{color:var(--text)}
+.kpi .k{font-size:12px;color:var(--text-2);font-weight:600}
+.kpi .v{font-size:28px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-top:4px;line-height:1.1}
+.kpi .d{font-size:12px;color:var(--text-3);margin-top:4px}
+
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;box-shadow:var(--shadow);min-width:0}
+.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.card h2{font-size:15px;margin:0;font-weight:650;color:var(--inst-green);padding-left:10px;border-left:3px solid var(--inst-gold)}
+:root[data-theme="dark"] .card h2{color:var(--text)}
+.card .note{font-size:12px;color:var(--text-2);margin:2px 0 10px}
+.card .src{font-size:11px;color:var(--text-3);margin-top:8px}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--text-2);margin:0 0 6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{fill:var(--text-2);font-size:11px;font-family:inherit}
+svg .val{fill:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+svg .gridl{stroke:var(--grid);stroke-width:1}
+svg .axis{stroke:var(--border)}
+.empty{color:var(--text-3);font-size:13px;padding:30px 0;text-align:center}
+
+/* Insights */
+.insights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;margin:0;padding:0;list-style:none}
+.insights li{position:relative;padding-left:18px;font-size:13.5px}
+.insights li::before{content:"";position:absolute;left:0;top:7px;width:8px;height:8px;border-radius:2px;background:var(--inst-gold)}
+.insights b{font-variant-numeric:tabular-nums}
+
+/* Tables */
+.tbl-wrap{overflow:auto;max-height:560px;border:1px solid var(--border);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+thead th{position:sticky;top:0;background:var(--surface-2);text-align:left;font-weight:600;color:var(--text-2);font-size:12px;padding:8px 10px;border-bottom:1px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none}
+thead th.num,td.num{text-align:right;font-variant-numeric:tabular-nums}
+thead th .arr{opacity:.5;margin-left:3px}
+tbody td{padding:7px 10px;border-bottom:1px solid var(--grid);vertical-align:top}
+tbody tr:hover td{background:var(--surface-2)}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;border:1px solid var(--border)}
+.pill.BAJO{color:var(--bajo);border-color:color-mix(in srgb,var(--bajo) 45%,transparent)}
+.pill.BASICO{color:var(--basico);border-color:color-mix(in srgb,var(--basico) 45%,transparent)}
+.pill.ALTO{color:var(--alto);border-color:color-mix(in srgb,var(--alto) 45%,transparent)}
+.ar{display:inline-flex;gap:4px;align-items:center;font-size:11px;padding:1px 6px;margin:1px 3px 1px 0;border-radius:5px;background:var(--surface-2);border:1px solid var(--border);white-space:nowrap;font-variant-numeric:tabular-nums}
+.ar .sw{width:7px;height:7px;border-radius:2px}
+.tag.prio{color:#fff;background:var(--inst-red)}
+.tag{font-size:10.5px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:1px 5px;margin-left:6px;white-space:nowrap}
+.small{font-size:12px;color:var(--text-2)}
+.notes{font-size:12.5px;color:var(--text-2);margin:0;padding-left:18px}
+.notes li{margin:3px 0}
+footer{margin-top:20px;font-size:12px;color:var(--text-3);text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+footer img{width:34px;opacity:.9}
+footer .lema{font-style:italic;color:var(--inst-green)}
+
+/* Tooltip */
+#tt{position:fixed;pointer-events:none;z-index:50;background:var(--text);color:var(--surface);font-size:12px;padding:8px 10px;border-radius:8px;max-width:300px;opacity:0;transition:opacity .08s;box-shadow:0 4px 14px rgba(0,0,0,.18);line-height:1.4}
+#tt b{font-weight:700}
+#tt .r{display:flex;justify-content:space-between;gap:14px}
+
+@media (max-width:1100px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.c4,.c5,.c6,.c7,.c8{grid-column:span 12}.insights{grid-template-columns:1fr}}
+@media (max-width:560px){.filters{position:static}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi .v{font-size:24px}h1{font-size:20px}input[type=search]{min-width:0;width:100%}}
+@media print{.filters{position:static}.top-actions{display:none}.tbl-wrap{max-height:none;overflow:visible}.card{break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <img class="escudo" src="__LOGO__" alt="Escudo I.E. San Pedro y San Pablo">
+      <div>
+        <div class="eyebrow">I.E. San Pedro y San Pablo · Guapi, Cauca · Comité de Evaluación y Promoción</div>
+        <h1>Reprobación en secundaria — Período final 2026</h1>
+        <div class="sub">Grados 6° a 11° · 10 cursos · Fuente: Listado_reprobados_secundaria_2026.xlsx (datos sin modificar)</div>
+        <div class="lema">«Virtud y Ciencia»</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span class="badge"><span class="dot"></span>Uso institucional reservado</span>
+      <button id="themeBtn" type="button" title="Cambiar tema claro/oscuro">◐ Tema</button>
+      <button type="button" onclick="window.print()">Imprimir</button>
+    </div>
+  </header>
+
+  <section class="filters" aria-label="Filtros">
+    <div class="frow">
+      <div><span class="flabel">Grado</span><span class="chips" id="gradeChips"></span></div>
+    </div>
+    <div class="frow" style="margin-top:8px">
+      <div><span class="flabel">Desempeño</span><span class="seg" id="desSeg"></span></div>
+      <div><span class="flabel">Áreas perdidas</span><span class="seg" id="tramoSeg"></span></div>
+      <div><span class="flabel">Revisión</span><span class="seg" id="prioSeg"></span></div>
+      <input type="search" id="q" placeholder="Buscar estudiante…" aria-label="Buscar estudiante">
+      <button type="button" id="reset">Limpiar filtros</button>
+    </div>
+    <div class="fsum" id="fsum"></div>
+  </section>
+
+  <section class="kpis" id="kpis"></section>
+
+  <div class="grid">
+    <div class="card c12">
+      <h2>Hallazgos clave</h2>
+      <p class="note">Se recalculan con los filtros activos.</p>
+      <ul class="insights" id="insights"></ul>
+    </div>
+
+    <div class="card c7">
+      <h2>Estudiantes reprobados por grado</h2>
+      <p class="note">Barras: estudiantes reprobados. Debajo de cada grado, áreas en bajo acumuladas. Clic en una barra para filtrar.</p>
+      <div id="chGrade"></div>
+      <div class="src">Fuente: hoja «Resumen» y hojas por grado.</div>
+    </div>
+    <div class="card c5">
+      <h2>¿Cuántas áreas pierde cada estudiante?</h2>
+      <p class="note">Estudiantes según número de áreas en bajo.</p>
+      <div id="chDist"></div>
+      <div class="src">Fuente: columna «Áreas (bajo)».</div>
+    </div>
+
+    <div class="card c5">
+      <h2>Áreas con más reprobación</h2>
+      <p class="note">Estudiantes que pierden cada área y su valoración media.</p>
+      <div id="chArea"></div>
+      <div class="src">Fuente: columna «Áreas perdidas» (códigos originales).</div>
+    </div>
+    <div class="card c7">
+      <h2>Mapa de calor: grado × área</h2>
+      <p class="note">Número de estudiantes que pierden el área en cada grado. Más oscuro = más estudiantes.</p>
+      <div id="chHeat"></div>
+      <div class="src">Fuente: columna «Áreas perdidas».</div>
+    </div>
+
+    <div class="card c6">
+      <h2>Inasistencias vs. promedio final</h2>
+      <p class="note">Cada punto es un estudiante; color según desempeño general reportado.</p>
+      <div class="legend" id="lgScatter"></div>
+      <div id="chScatter"></div>
+      <div class="src">Fuente: columnas «Inasistencias», «Promedio final», «Desempeño».</div>
+    </div>
+    <div class="card c6">
+      <h2>Severidad: valoraciones por área</h2>
+      <p class="note">Cada punto es una valoración en bajo (&lt; 3,0). Línea: mediana del área.</p>
+      <div id="chStrip"></div>
+      <div class="src">Fuente: columna «Áreas perdidas».</div>
+    </div>
+
+    <div class="card c5">
+      <h2>Casos prioritarios por grado</h2>
+      <p class="note">Criterio: 1 sola área perdida, valoración ≥ 2,7 y promedio final ≥ 3,7.</p>
+      <div class="legend"><span><i style="background:var(--seq-5)"></i>Ya en hoja «Casos 1 área»</span><span><i style="background:var(--inst-red)"></i>Nuevos con este criterio</span></div>
+      <div id="chPrio"></div>
+      <div class="src">Fuente: hojas por grado y hoja «Casos 1 área».</div>
+    </div>
+    <div class="card c7">
+      <h2>Casos prioritarios de revisión</h2>
+      <p class="note">Ordenados por promedio final. La hoja «Casos 1 área» usa límites estrictos (&gt; 2,7 y &gt; 3,7); este criterio incluye los valores exactos 2,7 y 3,7. La selección no modifica el estado académico ni implica promoción automática: la decisión corresponde al comité según el SIEE.</p>
+      <div class="tbl-wrap" style="max-height:480px"><table id="tblCasos"></table></div>
+      <div class="src" id="prioCount"></div>
+    </div>
+
+    <div class="card c12">
+      <h2>Detalle por estudiante</h2>
+      <p class="note">Clic en el encabezado para ordenar. Color de cada área: <span class="ar"><span class="sw" style="background:var(--seq-6)"></span>&lt; 2,0</span><span class="ar"><span class="sw" style="background:var(--seq-4)"></span>2,0 – 2,6</span><span class="ar"><span class="sw" style="background:var(--seq-2)"></span>2,7 – 2,9</span> · <span class="tag prio">Prioritario</span> = cumple el criterio de revisión prioritaria · <span class="tag">Caso comité</span> = aparece en «Casos 1 área».</p>
+      <div class="tbl-wrap"><table id="tblDet"></table></div>
+      <div class="src" id="detCount"></div>
+    </div>
+
+    <div class="card c12">
+      <h2>Notas metodológicas</h2>
+      <ul class="notes">
+        <li>Los datos se presentan sin modificaciones: nombres, estados, desempeños, valoraciones y códigos de área son los del archivo original.</li>
+        <li>Inasistencias corresponde a la columna TOTAL del archivo original. Promedio final tomado del resumen académico del período final 2026.</li>
+        <li>Las 100 personas y 353 áreas en bajo coinciden con la hoja «Resumen»; el número de áreas listadas por estudiante coincide con «Áreas (bajo)» en los 100 casos.</li>
+        <li>DISCP (disciplina) se registra aparte de las áreas académicas en el archivo; aquí no se cuenta como área perdida. Aparece en 13 estudiantes.</li>
+        <li>En 10-1, tres estudiantes tienen una valoración baja en la columna M sin encabezado; el archivo la identifica provisionalmente como «Área sin rótulo (col. M)» y así se conserva.</li>
+        <li>Se conserva el desempeño general reportado aunque sea BÁSICO o ALTO en estudiantes con estado REPROBÓ.</li>
+        <li>Los tramos «1 área / 2–3 áreas / 4 o más» y los colores por valoración son agrupaciones de lectura del dashboard; no son criterios de promoción.</li>
+      </ul>
+    </div>
+  </div>
+  <footer><img src="__LOGO__" alt=""><span class="lema">Virtud y Ciencia</span><span>Dashboard generado a partir del archivo del Comité de Evaluación y Promoción · Contiene datos personales de estudiantes — uso institucional reservado.</span></footer>
+</div>
+<div id="tt" role="tooltip"></div>
+
+<script>
+const DATA = __DATA__;
+const GRADES = ['6-1','6-2','7-1','7-2','8-1','8-2','9-1','9-2','10-1','11-1'];
+const CASOS = new Set(DATA.casos);
+// Criterio de revisión prioritaria: 1 sola área perdida, valoración ≥ 2,7 y promedio final ≥ 3,7
+const PRIO = s => s.nb===1 && s.a[0][1]>=2.7 && s.p>=3.7;
+const S = DATA.studs.map((s,i)=>({...s,id:i,caso:CASOS.has(s.n),prio:false})).map(s=>({...s,prio:PRIO(s)}));
+const AREAS = (()=>{const c={};S.forEach(s=>s.a.forEach(([a])=>c[a]=(c[a]||0)+1));return Object.keys(c).sort((x,y)=>c[y]-c[x]);})();
+const shortArea = a => a.startsWith('Área sin rótulo') ? 'Sin rótulo (M)' : a;
+const DES = ['BAJO','BASICO','ALTO'];
+const DES_LABEL = {BAJO:'Bajo',BASICO:'Básico',ALTO:'Alto'};
+const TRAMOS = [{k:'all',l:'Todas'},{k:'1',l:'1 área'},{k:'2-3',l:'2–3'},{k:'4+',l:'4 o más'}];
+const inTramo=(n,t)=>t==='all'||(t==='1'&&n===1)||(t==='2-3'&&n>=2&&n<=3)||(t==='4+'&&n>=4);
+
+const st = {grades:new Set(), des:'all', tramo:'all', prio:'all', q:'', sort:{k:'nb',dir:-1}};
+
+const fmt = (x,d=1)=> (x==null||isNaN(x))?'—':x.toLocaleString('es-CO',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct = (a,b)=> b? fmt(100*a/b,0)+' %':'—';
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const mean = a => a.length? a.reduce((x,y)=>x+y,0)/a.length : NaN;
+const median = a => {if(!a.length)return NaN;const b=[...a].sort((x,y)=>x-y),m=b.length>>1;return b.length%2?b[m]:(b[m-1]+b[m])/2;};
+const corr=(x,y)=>{const n=x.length;if(n<3)return NaN;const mx=mean(x),my=mean(y);let a=0,b=0,c=0;for(let i=0;i<n;i++){a+=(x[i]-mx)*(y[i]-my);b+=(x[i]-mx)**2;c+=(y[i]-my)**2;}return a/Math.sqrt(b*c);};
+const gradeLabel = g => 'Grado '+g;
+
+/* ---------- Tooltip ---------- */
+const tt=document.getElementById('tt');
+function showTT(e,html){tt.innerHTML=html;tt.style.opacity=1;moveTT(e);}
+function moveTT(e){const pad=14,w=tt.offsetWidth,h=tt.offsetHeight;let x=e.clientX+pad,y=e.clientY+pad;if(x+w>innerWidth-8)x=e.clientX-w-pad;if(y+h>innerHeight-8)y=e.clientY-h-pad;tt.style.left=x+'px';tt.style.top=y+'px';}
+function hideTT(){tt.style.opacity=0;}
+function bindTT(el,fn){el.addEventListener('mouseenter',e=>showTT(e,fn()));el.addEventListener('mousemove',moveTT);el.addEventListener('mouseleave',hideTT);}
+
+/* ---------- Filtering ---------- */
+function filtered({ignoreGrade=false}={}){
+  const q=st.q.trim().toLowerCase();
+  return S.filter(s=>(ignoreGrade||!st.grades.size||st.grades.has(s.g))
+    &&(st.des==='all'||s.d===st.des)&&inTramo(s.nb,st.tramo)&&(st.prio==='all'||s.prio)
+    &&(!q||s.n.toLowerCase().includes(q)));
+}
+
+/* ---------- Controls ---------- */
+function buildControls(){
+  const gc=document.getElementById('gradeChips');
+  const all=document.createElement('button');all.className='chip all';all.textContent='Todos';all.type='button';
+  all.onclick=()=>{st.grades.clear();render();};gc.appendChild(all);
+  GRADES.forEach(g=>{const b=document.createElement('button');b.type='button';b.className='chip';b.dataset.g=g;
+    b.textContent=g;b.onclick=(e)=>{toggleGrade(g,e.ctrlKey||e.metaKey||e.shiftKey||true);};gc.appendChild(b);});
+  const ds=document.getElementById('desSeg');
+  [['all','Todos'],...DES.map(d=>[d,DES_LABEL[d]])].forEach(([k,l])=>{const b=document.createElement('button');b.type='button';b.dataset.k=k;b.textContent=l;b.onclick=()=>{st.des=k;render();};ds.appendChild(b);});
+  const ts=document.getElementById('tramoSeg');
+  TRAMOS.forEach(t=>{const b=document.createElement('button');b.type='button';b.dataset.k=t.k;b.textContent=t.l;b.onclick=()=>{st.tramo=t.k;render();};ts.appendChild(b);});
+  const ps=document.getElementById('prioSeg');
+  [['all','Todos'],['prio','Prioritarios']].forEach(([k,l])=>{const b=document.createElement('button');b.type='button';b.dataset.k=k;b.textContent=l;b.onclick=()=>{st.prio=k;render();};ps.appendChild(b);});
+  document.getElementById('q').addEventListener('input',e=>{st.q=e.target.value;render();});
+  document.getElementById('reset').onclick=()=>{st.grades.clear();st.des='all';st.tramo='all';st.prio='all';st.q='';document.getElementById('q').value='';render();};
+  document.getElementById('themeBtn').onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;r.dataset.theme=dark?'light':'dark';render();};
+}
+function toggleGrade(g){st.grades.has(g)?st.grades.delete(g):st.grades.add(g);render();}
+function syncControls(){
+  document.querySelectorAll('#gradeChips .chip').forEach(b=>{b.setAttribute('aria-pressed', b.classList.contains('all')? String(!st.grades.size) : String(st.grades.has(b.dataset.g)));});
+  document.querySelectorAll('#desSeg button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===st.des)));
+  document.querySelectorAll('#tramoSeg button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===st.tramo)));
+  document.querySelectorAll('#prioSeg button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.k===st.prio)));
+  const parts=[];
+  parts.push(st.grades.size? 'Grados: '+GRADES.filter(g=>st.grades.has(g)).join(', ') : 'Todos los grados');
+  if(st.des!=='all')parts.push('Desempeño: '+DES_LABEL[st.des]);
+  if(st.tramo!=='all')parts.push('Áreas perdidas: '+TRAMOS.find(t=>t.k===st.tramo).l);
+  if(st.prio==='prio')parts.push('Solo casos prioritarios');
+  if(st.q.trim())parts.push('Búsqueda: “'+esc(st.q.trim())+'”');
+  document.getElementById('fsum').innerHTML='Vista actual — '+parts.join(' · ')+'. Los grados admiten selección múltiple.';
+}
+
+/* ---------- KPIs ---------- */
+function renderKPIs(F){
+  const n=F.length, areas=F.reduce((a,s)=>a+s.nb,0);
+  const uno=F.filter(s=>s.nb===1).length, cuatro=F.filter(s=>s.nb>=4).length;
+  const k=[
+    ['Estudiantes reprobados', fmt(n,0), n===100?'Total secundaria':'de 100 en secundaria'],
+    ['Áreas en bajo', fmt(areas,0), n? fmt(areas/n,1)+' por estudiante':'—'],
+    ['Promedio final medio', fmt(mean(F.map(s=>s.p)),2), 'Mediana '+fmt(median(F.map(s=>s.p)),2)],
+    ['Inasistencias promedio', fmt(mean(F.map(s=>s.i)),1), 'Mediana '+fmt(median(F.map(s=>s.i)),0)],
+    ['Casos prioritarios', fmt(F.filter(s=>s.prio).length,0), `de ${uno} que pierden 1 sola área`],
+    ['Pierden 4 o más áreas', fmt(cuatro,0), pct(cuatro,n)+' del grupo'],
+  ];
+  document.getElementById('kpis').innerHTML=k.map(([a,b,c])=>`<div class="kpi${a==='Casos prioritarios'?' hl':''}"><div class="k">${a}</div><div class="v">${b}</div><div class="d">${c}</div></div>`).join('');
+}
+
+/* ---------- Insights ---------- */
+function renderInsights(F){
+  const el=document.getElementById('insights');
+  if(!F.length){el.innerHTML='<li>No hay estudiantes con los filtros actuales.</li>';return;}
+  const n=F.length, areas=F.reduce((a,s)=>a+s.nb,0), L=[];
+  const ac={},av={};F.forEach(s=>s.a.forEach(([a,v])=>{ac[a]=(ac[a]||0)+1;(av[a]=av[a]||[]).push(v);}));
+  const top=Object.entries(ac).sort((a,b)=>b[1]-a[1]);
+  if(top.length){const [a,c]=top[0];let t=`<b>${esc(shortArea(a))}</b> es el área con más reprobación: <b>${c}</b> estudiantes (${pct(c,n)}), valoración media <b>${fmt(mean(av[a]),2)}</b>.`;
+    if(top[1]) t+=` Le sigue${top[2]?'n':''} ${esc(shortArea(top[1][0]))} (${top[1][1]})${top[2]?' y '+esc(shortArea(top[2][0]))+' ('+top[2][1]+')':''}.`; L.push(t);}
+  const four=F.filter(s=>s.nb>=4), fourA=four.reduce((a,s)=>a+s.nb,0);
+  if(four.length) L.push(`<b>${four.length}</b> estudiantes (${pct(four.length,n)}) pierden 4 o más áreas y concentran el <b>${pct(fourA,areas)}</b> de las áreas en bajo: el problema está concentrado en pocos casos.`);
+  const uno=F.filter(s=>s.nb===1), cas=F.filter(s=>s.caso);
+  const pr=F.filter(s=>s.prio);
+  if(pr.length){const bg={};pr.forEach(s=>bg[s.g]=(bg[s.g]||0)+1);const tg=Object.entries(bg).sort((a,b)=>b[1]-a[1]);const mate=pr.filter(s=>s.a[0][0]==='MATE').length;
+    L.unshift(`<b>${pr.length}</b> ${pr.length===1?'caso prioritario':'casos prioritarios'} de revisión (1 área ≥ 2,7 y promedio ≥ 3,7)${pr.filter(s=>!s.caso).length?`, ${pr.filter(s=>!s.caso).length} no figuran en la hoja del comité`:''}. ${(!st.grades.size||st.grades.size>1)?`Grado con más casos: <b>${tg[0][0]}</b> (${tg[0][1]})${tg[1]?`, seguido de ${tg[1][0]} (${tg[1][1]})`:''}. `:''}${mate?`<b>${mate}</b> de ${pr.length} son de MATE.`:''}`);}
+  if(uno.length) L.push(`<b>${uno.length}</b> ${uno.length===1?'estudiante':'estudiantes'} (${pct(uno.length,n)}) ${uno.length===1?'reprueba':'reprueban'} por una sola área; <b>${cas.length}</b> ${uno.length===1?'figura':'de ellos figuran'} en la lista de casos para análisis del comité.`);
+  if(!st.grades.size||st.grades.size>1){
+    const byG={};F.forEach(s=>{byG[s.g]=byG[s.g]||{n:0,a:0};byG[s.g].n++;byG[s.g].a+=s.nb;});
+    const g=Object.entries(byG).sort((a,b)=>b[1].n-a[1].n||b[1].a-a[1].a)[0];
+    const ga=Object.entries(byG).sort((a,b)=>b[1].a/b[1].n-a[1].a/a[1].n)[0];
+    L.push(`<b>${g[0]}</b> tiene más reprobados (${g[1].n}, ${pct(g[1].n,n)} de la vista) y <b>${ga[0]}</b> la mayor carga por estudiante (${fmt(ga[1].a/ga[1].n,1)} áreas en bajo en promedio).`);
+  } else {
+    const g=[...st.grades][0];
+    L.push(`En <b>${g}</b> hay <b>${n}</b> estudiantes en la vista con <b>${areas}</b> áreas en bajo (${fmt(areas/n,1)} por estudiante; promedio secundaria: 3,5).`);
+  }
+  const r=corr(F.map(s=>s.i),F.map(s=>s.p));
+  if(n>=8&&!isNaN(r)){const m=Math.abs(r)>=.5?'fuerte':Math.abs(r)>=.3?'moderada':'débil';
+    L.push(`Relación ${m} entre inasistencias y promedio final (r = ${fmt(r,2)}): ${r<0?'a más inasistencias, menor promedio':'sin una tendencia negativa clara'}. Es una asociación, no prueba causa.`);}
+  const des=DES.map(d=>[d,F.filter(s=>s.d===d).length]).filter(x=>x[1]);
+  if(des.length) L.push(`Desempeño general reportado: ${des.map(([d,c])=>`${DES_LABEL[d]} <b>${c}</b>`).join(' · ')}. ${F.some(s=>s.d!=='BAJO')?'Varios estudiantes reprueban pese a un desempeño general básico o alto, típico de pérdidas puntuales.':''}`);
+  el.innerHTML=L.map(x=>`<li>${x}</li>`).join('');
+}
+
+/* ---------- SVG helpers ---------- */
+const NS='http://www.w3.org/2000/svg';
+function E(tag,attrs={},parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+function T(txt,attrs,parent){const e=E('text',attrs,parent);e.textContent=txt;return e;}
+function svgRoot(host,w,h,label){host.innerHTML='';const s=E('svg',{viewBox:`0 0 ${w} ${h}`,role:'img','aria-label':label});host.appendChild(s);return s;}
+// bar with rounded data-end, flat baseline
+function vbar(p,x,y,w,h,fill,r=4){r=Math.min(r,w/2,h);if(h<=0)return E('rect',{x,y,width:w,height:0},p);
+  return E('path',{d:`M${x},${y+h}V${y+r}Q${x},${y} ${x+r},${y}H${x+w-r}Q${x+w},${y} ${x+w},${y+r}V${y+h}Z`,fill},p);}
+function hbar(p,x,y,w,h,fill,r=4){r=Math.min(r,h/2,w);if(w<=0)return E('rect',{x,y,width:0,height:h},p);
+  return E('path',{d:`M${x},${y}H${x+w-r}Q${x+w},${y} ${x+w},${y+r}V${y+h-r}Q${x+w},${y+h} ${x+w-r},${y+h}H${x}Z`,fill},p);}
+const niceMax=(m,step)=>Math.max(step,Math.ceil(m/step)*step);
+
+/* ---------- Chart: by grade ---------- */
+function renderGrade(){
+  const host=document.getElementById('chGrade');
+  const F=filtered({ignoreGrade:true});
+  const rows=GRADES.map(g=>{const ss=F.filter(s=>s.g===g);return{g,n:ss.length,a:ss.reduce((x,s)=>x+s.nb,0)};});
+  const W=640,H=270,m={l:34,r:8,t:16,b:46},iw=W-m.l-m.r,ih=H-m.t-m.b;
+  const s=svgRoot(host,W,H,'Estudiantes reprobados por grado');
+  const mx=Math.max(...rows.map(r=>r.n),1),stp=mx>20?10:mx>8?5:mx>4?2:1,max=niceMax(mx,stp), y=v=>m.t+ih-ih*v/max;
+  for(let v=0;v<=max;v+=stp){E('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),class:'gridl'},s);T(fmt(v,0),{x:m.l-6,y:y(v)+4,'text-anchor':'end'},s);}
+  const bw=iw/rows.length, w=Math.min(36,bw*.58);
+  rows.forEach((r,i)=>{
+    const cx=m.l+bw*i+bw/2, sel=!st.grades.size||st.grades.has(r.g);
+    const fill=sel?css('--accent'):css('--muted');
+    vbar(s,cx-w/2,y(r.n),w,m.t+ih-y(r.n),fill);
+    if(r.n) T(r.n,{x:cx,y:y(r.n)-5,'text-anchor':'middle',class:'val'},s);
+    T(r.g,{x:cx,y:H-m.b+16,'text-anchor':'middle',style:`font-weight:${sel&&st.grades.size?700:500};fill:${css('--text')}`},s);
+    T(r.a+' áreas',{x:cx,y:H-m.b+31,'text-anchor':'middle',style:'font-size:10px'},s);
+    const hit=E('rect',{x:cx-bw/2,y:m.t,width:bw,height:ih+m.b,fill:'transparent',style:'cursor:pointer'},s);
+    hit.addEventListener('click',()=>toggleGrade(r.g));
+    bindTT(hit,()=>`<b>${gradeLabel(r.g)}</b><div class="r"><span>Reprobados</span><b>${r.n}</b></div><div class="r"><span>Áreas en bajo</span><b>${r.a}</b></div><div class="r"><span>Áreas por estudiante</span><b>${r.n?fmt(r.a/r.n,1):'—'}</b></div><div style="opacity:.7;margin-top:4px">Clic para ${st.grades.has(r.g)?'quitar':'agregar'} filtro</div>`);
+  });
+  E('line',{x1:m.l,x2:W-m.r,y1:m.t+ih,y2:m.t+ih,class:'axis'},s);
+}
+
+/* ---------- Chart: distribution ---------- */
+function renderDist(F){
+  const host=document.getElementById('chDist');
+  if(!F.length){host.innerHTML='<div class="empty">Sin datos</div>';return;}
+  const ks=[1,2,3,4,5,6,7,8,9,10], rows=ks.map(k=>({k,n:F.filter(s=>s.nb===k).length}));
+  const W=460,H=270,m={l:30,r:8,t:16,b:40},iw=W-m.l-m.r,ih=H-m.t-m.b;
+  const s=svgRoot(host,W,H,'Distribución del número de áreas perdidas');
+  const mx=Math.max(...rows.map(r=>r.n),1),stp=mx>20?10:mx>8?5:mx>4?2:1,max=niceMax(mx,stp), y=v=>m.t+ih-ih*v/max;
+  for(let v=0;v<=max;v+=stp){E('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),class:'gridl'},s);T(fmt(v,0),{x:m.l-6,y:y(v)+4,'text-anchor':'end'},s);}
+  const bw=iw/rows.length,w=Math.min(30,bw*.62);
+  const col=k=>k===1?css('--seq-3'):k<=3?css('--seq-4'):css('--seq-5');
+  rows.forEach((r,i)=>{const cx=m.l+bw*i+bw/2;vbar(s,cx-w/2,y(r.n),w,m.t+ih-y(r.n),col(r.k));
+    if(r.n)T(r.n,{x:cx,y:y(r.n)-5,'text-anchor':'middle',class:'val'},s);
+    T(r.k,{x:cx,y:H-m.b+16,'text-anchor':'middle'},s);
+    const hit=E('rect',{x:cx-bw/2,y:m.t,width:bw,height:ih,fill:'transparent'},s);
+    bindTT(hit,()=>`<b>${r.k} ${r.k===1?'área':'áreas'} en bajo</b><div class="r"><span>Estudiantes</span><b>${r.n}</b></div><div class="r"><span>% de la vista</span><b>${pct(r.n,F.length)}</b></div>`);});
+  E('line',{x1:m.l,x2:W-m.r,y1:m.t+ih,y2:m.t+ih,class:'axis'},s);
+  T('Número de áreas perdidas',{x:m.l+iw/2,y:H-6,'text-anchor':'middle'},s);
+}
+
+/* ---------- Chart: areas ---------- */
+function renderArea(F){
+  const host=document.getElementById('chArea');
+  const ac={},av={};F.forEach(s=>s.a.forEach(([a,v])=>{ac[a]=(ac[a]||0)+1;(av[a]=av[a]||[]).push(v);}));
+  const rows=Object.entries(ac).sort((a,b)=>b[1]-a[1]).map(([a,c])=>({a,c,m:mean(av[a])}));
+  if(!rows.length){host.innerHTML='<div class="empty">Sin datos</div>';return;}
+  const rh=26,W=460,m={l:96,r:96,t:4,b:4},H=m.t+m.b+rh*rows.length,iw=W-m.l-m.r;
+  const s=svgRoot(host,W,H,'Áreas con más reprobación');
+  const max=Math.max(...rows.map(r=>r.c));
+  T('Valoración media',{x:W-4,y:0,'text-anchor':'end',style:'font-size:10px'},s).setAttribute('dy','0');
+  rows.forEach((r,i)=>{const y=m.t+i*rh+6,h=rh-10,w=iw*r.c/max;
+    T(shortArea(r.a),{x:m.l-8,y:y+h/2+4,'text-anchor':'end',style:`fill:${css('--text')}`},s);
+    hbar(s,m.l,y,w,h,css('--accent'));
+    T(`${r.c} · ${pct(r.c,F.length)}`,{x:m.l+w+6,y:y+h/2+4,class:'val'},s);
+    T(fmt(r.m,2),{x:W-4,y:y+h/2+4,'text-anchor':'end'},s);
+    const hit=E('rect',{x:0,y:m.t+i*rh,width:W,height:rh,fill:'transparent'},s);
+    bindTT(hit,()=>`<b>${esc(r.a)}</b><div class="r"><span>Estudiantes que la pierden</span><b>${r.c}</b></div><div class="r"><span>% de la vista</span><b>${pct(r.c,F.length)}</b></div><div class="r"><span>Valoración media</span><b>${fmt(r.m,2)}</b></div><div class="r"><span>Mínima</span><b>${fmt(Math.min(...av[r.a]),1)}</b></div>`);});
+  s.setAttribute('viewBox',`0 -10 ${W} ${H+10}`);
+}
+
+/* ---------- Chart: heatmap ---------- */
+function renderHeat(F){
+  const host=document.getElementById('chHeat');
+  const gs=GRADES.filter(g=>F.some(s=>s.g===g));
+  if(!gs.length){host.innerHTML='<div class="empty">Sin datos</div>';return;}
+  const cnt={};let max=0;F.forEach(s=>s.a.forEach(([a])=>{const k=s.g+'|'+a;cnt[k]=(cnt[k]||0)+1;max=Math.max(max,cnt[k]);}));
+  const tot={};F.forEach(s=>tot[s.g]=(tot[s.g]||0)+1);
+  const cw=54,ch=26,m={l:52,t:30,r:6,b:4},W=m.l+cw*AREAS.length+m.r,H=m.t+ch*gs.length+m.b;
+  const s=svgRoot(host,W,H,'Mapa de calor grado por área');
+  const steps=['--seq-1','--seq-2','--seq-3','--seq-4','--seq-5','--seq-6'].map(css);
+  const colr=v=>v===0?css('--surface-2'):steps[Math.min(5,Math.max(1,Math.ceil(5*v/max)))];
+  const ink=v=>{if(!v)return css('--text-3');const i=Math.min(5,Math.max(1,Math.ceil(5*v/max)));const dark=document.documentElement.dataset.theme==='dark'||(!document.documentElement.dataset.theme&&matchMedia('(prefers-color-scheme: dark)').matches);return (dark? i<=3 : i>=4)?'#fff':css('--text');};
+  AREAS.forEach((a,j)=>T(shortArea(a),{x:m.l+cw*j+cw/2,y:m.t-10,'text-anchor':'middle',style:`font-size:10px;fill:${css('--text')}`},s));
+  gs.forEach((g,i)=>{T(g,{x:m.l-8,y:m.t+ch*i+ch/2+4,'text-anchor':'end',style:`fill:${css('--text')}`},s);
+    AREAS.forEach((a,j)=>{const v=cnt[g+'|'+a]||0,x=m.l+cw*j,y=m.t+ch*i;
+      const r=E('rect',{x:x+1,y:y+1,width:cw-2,height:ch-2,rx:4,fill:colr(v)},s);
+      T(v||'·',{x:x+cw/2,y:y+ch/2+4,'text-anchor':'middle',style:`fill:${ink(v)};font-weight:${v?600:400};font-variant-numeric:tabular-nums`},s);
+      bindTT(r,()=>`<b>${g} · ${esc(a)}</b><div class="r"><span>Estudiantes que la pierden</span><b>${v}</b></div><div class="r"><span>% de reprobados del grado</span><b>${pct(v,tot[g])}</b></div>`);});});
+}
+
+/* ---------- Chart: scatter ---------- */
+function renderScatter(F){
+  const host=document.getElementById('chScatter');
+  document.getElementById('lgScatter').innerHTML=DES.map(d=>`<span><i style="background:var(--${d.toLowerCase()})"></i>${DES_LABEL[d]} (${F.filter(s=>s.d===d).length})</span>`).join('');
+  if(!F.length){host.innerHTML='<div class="empty">Sin datos</div>';return;}
+  const W=600,H=300,m={l:40,r:12,t:10,b:40},iw=W-m.l-m.r,ih=H-m.t-m.b;
+  const s=svgRoot(host,W,H,'Inasistencias frente a promedio final');
+  const xmax=niceMax(Math.max(...S.map(s=>s.i)),10), ymin=1, ymax=4.5;
+  const x=v=>m.l+iw*v/xmax, y=v=>m.t+ih-ih*(v-ymin)/(ymax-ymin);
+  for(let v=0;v<=xmax;v+=10){E('line',{x1:x(v),x2:x(v),y1:m.t,y2:m.t+ih,class:'gridl'},s);T(v,{x:x(v),y:m.t+ih+16,'text-anchor':'middle'},s);}
+  for(let v=1;v<=4.5;v+=.5){E('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),class:'gridl'},s);T(fmt(v,1),{x:m.l-6,y:y(v)+4,'text-anchor':'end'},s);}
+  E('line',{x1:m.l,x2:W-m.r,y1:y(3),y2:y(3),stroke:css('--text-3'),'stroke-dasharray':'4 4','stroke-width':1},s);
+  T('3,0',{x:W-m.r,y:y(3)-4,'text-anchor':'end',style:'font-size:10px'},s);
+  T('Inasistencias (total)',{x:m.l+iw/2,y:H-4,'text-anchor':'middle'},s);
+  const yl=T('Promedio final',{x:12,y:m.t+ih/2,'text-anchor':'middle',transform:`rotate(-90 12 ${m.t+ih/2})`},s);
+  [...F].sort((a,b)=>(a.d==='BASICO')-(b.d==='BASICO')).reverse().forEach(st2=>{
+    const c=E('circle',{cx:x(st2.i),cy:y(st2.p),r:5.5,fill:css('--'+st2.d.toLowerCase()),stroke:css('--surface'),'stroke-width':2,'fill-opacity':.9},s);
+    bindTT(c,()=>`<b>${esc(st2.n)}</b><div style="opacity:.75">${st2.g} · ${DES_LABEL[st2.d]}</div><div class="r"><span>Inasistencias</span><b>${st2.i}</b></div><div class="r"><span>Promedio final</span><b>${fmt(st2.p,2)}</b></div><div class="r"><span>Áreas en bajo</span><b>${st2.nb}</b></div>`);});
+}
+
+/* ---------- Chart: strip ---------- */
+function renderStrip(F){
+  const host=document.getElementById('chStrip');
+  const av={};F.forEach(s=>s.a.forEach(([a,v])=>(av[a]=av[a]||[]).push({v,s})));
+  const rows=AREAS.filter(a=>av[a]);
+  if(!rows.length){host.innerHTML='<div class="empty">Sin datos</div>';return;}
+  const rh=26,W=600,m={l:96,r:14,t:6,b:30},H=m.t+m.b+rh*rows.length,iw=W-m.l-m.r;
+  const s=svgRoot(host,W,H,'Distribución de valoraciones por área');
+  const x=v=>m.l+iw*v/3;
+  for(let v=0;v<=3;v+=.5){E('line',{x1:x(v),x2:x(v),y1:m.t,y2:H-m.b,class:'gridl'},s);T(fmt(v,1),{x:x(v),y:H-m.b+16,'text-anchor':'middle'},s);}
+  T('Valoración del área',{x:m.l+iw/2,y:H-2,'text-anchor':'middle'},s);
+  const col=v=>v<2?css('--seq-6'):v<2.7?css('--seq-4'):css('--seq-3');
+  rows.forEach((a,i)=>{const cy=m.t+i*rh+rh/2;
+    T(shortArea(a),{x:m.l-8,y:cy+4,'text-anchor':'end',style:`fill:${css('--text')}`},s);
+    // jitter deterministic by stacking same values
+    const seen={};av[a].sort((p,q)=>p.v-q.v).forEach(({v,s:stu})=>{const k=v.toFixed(1);const n=seen[k]=(seen[k]||0)+1;
+      const off=((n%2?1:-1)*Math.ceil((n-1)/2))*3.2; const yy=cy+Math.max(-10,Math.min(10,off));
+      const c=E('circle',{cx:x(v),cy:yy,r:4,fill:col(v),'fill-opacity':.85,stroke:css('--surface'),'stroke-width':1},s);
+      bindTT(c,()=>`<b>${esc(stu.n)}</b><div style="opacity:.75">${stu.g} · ${esc(a)}</div><div class="r"><span>Valoración</span><b>${fmt(v,1)}</b></div>`);});
+    const md=median(av[a].map(o=>o.v));E('line',{x1:x(md),x2:x(md),y1:cy-11,y2:cy+11,stroke:css('--text'),'stroke-width':2,'stroke-linecap':'round'},s);
+    const hitL=E('rect',{x:0,y:cy-rh/2,width:m.l,height:rh,fill:'transparent'},s);
+    bindTT(hitL,()=>`<b>${esc(a)}</b><div class="r"><span>Valoraciones en bajo</span><b>${av[a].length}</b></div><div class="r"><span>Mediana</span><b>${fmt(md,1)}</b></div><div class="r"><span>Menores a 2,0</span><b>${av[a].filter(o=>o.v<2).length}</b></div>`);});
+}
+
+/* ---------- Chart: priority cases by grade ---------- */
+function renderPrio(F){
+  const host=document.getElementById('chPrio');
+  const P=F.filter(s=>s.prio);
+  const rows=GRADES.map(g=>{const ss=P.filter(s=>s.g===g);return{g,h:ss.filter(s=>s.caso).length,nw:ss.filter(s=>!s.caso).length};}).map(r=>({...r,n:r.h+r.nw})).sort((a,b)=>b.n-a.n||GRADES.indexOf(a.g)-GRADES.indexOf(b.g));
+  if(!P.length){host.innerHTML='<div class="empty">Sin casos prioritarios con los filtros actuales</div>';return;}
+  const rh=28,W=460,m={l:44,r:40,t:4,b:4},H=m.t+m.b+rh*rows.length,iw=W-m.l-m.r;
+  const s=svgRoot(host,W,H,'Casos prioritarios por grado');
+  const max=Math.max(...rows.map(r=>r.n),1);
+  rows.forEach((r,i)=>{const y=m.t+i*rh+6,h=rh-12,w1=iw*r.h/max,w2=iw*r.nw/max;
+    T(r.g,{x:m.l-8,y:y+h/2+4,'text-anchor':'end',style:`fill:${css('--text')};font-weight:${i===0&&r.n?700:500}`},s);
+    if(!r.n){E('rect',{x:m.l,y:y+h/2-.5,width:iw,height:1,fill:css('--grid')},s);}
+    if(r.h) (r.nw?E('rect',{x:m.l,y,width:Math.max(0,w1-1),height:h,fill:css('--seq-5')},s):hbar(s,m.l,y,w1,h,css('--seq-5')));
+    if(r.nw) hbar(s,m.l+w1+(r.h?1:0),y,Math.max(0,w2-(r.h?1:0)),h,css('--inst-red'));
+    T(r.n||'0',{x:m.l+w1+w2+6,y:y+h/2+4,class:r.n?'val':''},s);
+    const hit=E('rect',{x:0,y:m.t+i*rh,width:W,height:rh,fill:'transparent',style:'cursor:pointer'},s);
+    hit.addEventListener('click',()=>toggleGrade(r.g));
+    bindTT(hit,()=>`<b>${gradeLabel(r.g)}</b><div class="r"><span>Casos prioritarios</span><b>${r.n}</b></div><div class="r"><span>Ya en hoja del comité</span><b>${r.h}</b></div><div class="r"><span>Nuevos con el criterio</span><b>${r.nw}</b></div><div style="opacity:.7;margin-top:4px">Clic para filtrar por grado</div>`);});
+}
+
+/* ---------- Tables ---------- */
+const areaChips=s=>s.a.map(([a,v])=>`<span class="ar"><span class="sw" style="background:var(${v<2?'--seq-6':v<2.7?'--seq-4':'--seq-2'})"></span>${esc(shortArea(a))} ${fmt(v,1)}</span>`).join('')+(s.disc!=null?`<span class="small" style="margin-left:4px">DISCP ${fmt(s.disc,1)} (aparte)</span>`:'');
+const COLS=[
+  {k:'g',l:'Grado',f:s=>s.g,sv:s=>GRADES.indexOf(s.g)},
+  {k:'n',l:'Apellidos y nombres',f:s=>esc(s.n)+(s.prio?'<span class="tag prio">Prioritario</span>':'')+(s.caso?'<span class="tag">Caso comité</span>':''),sv:s=>s.n},
+  {k:'nb',l:'Áreas (bajo)',num:1,f:s=>s.nb,sv:s=>s.nb},
+  {k:'a',l:'Áreas perdidas y valoración',f:areaChips,sv:s=>s.a.length},
+  {k:'p',l:'Promedio final',num:1,f:s=>fmt(s.p,2),sv:s=>s.p},
+  {k:'i',l:'Inasistencias',num:1,f:s=>s.i,sv:s=>s.i},
+  {k:'d',l:'Desempeño',f:s=>`<span class="pill ${s.d}">${DES_LABEL[s.d]}</span>`,sv:s=>DES.indexOf(s.d)},
+  {k:'e',l:'Estado',f:s=>s.e==='REPROBO'?'Reprobó':esc(s.e),sv:s=>s.e},
+];
+function renderTable(F){
+  const t=document.getElementById('tblDet'),{k,dir}=st.sort,col=COLS.find(c=>c.k===k);
+  const rows=[...F].sort((a,b)=>{const x=col.sv(a),y=col.sv(b);return (x<y?-1:x>y?1:0)*dir||GRADES.indexOf(a.g)-GRADES.indexOf(b.g)||a.n.localeCompare(b.n);});
+  t.innerHTML=`<thead><tr>${COLS.map(c=>`<th data-k="${c.k}" class="${c.num?'num':''}">${c.l}<span class="arr">${c.k===k?(dir>0?'▲':'▼'):''}</span></th>`).join('')}</tr></thead><tbody>${rows.map(s=>`<tr>${COLS.map(c=>`<td class="${c.num?'num':''}">${c.f(s)}</td>`).join('')}</tr>`).join('')||`<tr><td colspan="${COLS.length}" class="empty">Sin estudiantes con estos filtros</td></tr>`}</tbody>`;
+  t.querySelectorAll('th').forEach(th=>th.onclick=()=>{const kk=th.dataset.k;st.sort={k:kk,dir:st.sort.k===kk?-st.sort.dir:(['n','g'].includes(kk)?1:-1)};renderTable(filtered());});
+  document.getElementById('detCount').textContent=`${rows.length} de ${S.length} estudiantes.`;
+}
+function renderCasos(F){
+  const t=document.getElementById('tblCasos');const ids=new Set(F.map(s=>s.id));
+  const rows=S.filter(s=>s.prio&&ids.has(s.id)).sort((a,b)=>b.p-a.p||a.n.localeCompare(b.n));
+  t.innerHTML=`<thead><tr><th>Grado</th><th>Apellidos y nombres</th><th>Área</th><th class="num">Valoración</th><th class="num">Promedio final</th><th class="num">Inasist.</th><th>Hoja comité</th></tr></thead><tbody>${rows.map(s=>`<tr><td>${s.g}</td><td>${esc(s.n)}</td><td>${esc(s.a[0][0])}</td><td class="num">${fmt(s.a[0][1],1)}</td><td class="num">${fmt(s.p,2)}</td><td class="num">${s.i}</td><td>${s.caso?'<span class="small">Sí</span>':'<span class="tag prio" style="margin-left:0">Nuevo</span>'}</td></tr>`).join('')||'<tr><td colspan="7" class="empty">Ningún caso prioritario con los filtros actuales</td></tr>'}</tbody>`;
+  const nw=rows.filter(s=>!s.caso).length;
+  document.getElementById('prioCount').textContent=`${rows.length} casos prioritarios en la vista · ${rows.length-nw} ya estaban en la hoja «Casos 1 área» · ${nw} nuevos.`;
+}
+
+/* ---------- Render ---------- */
+function render(){
+  syncControls();const F=filtered();
+  renderKPIs(F);renderInsights(F);renderGrade();renderDist(F);renderArea(F);renderHeat(F);renderScatter(F);renderStrip(F);renderPrio(F);renderCasos(F);renderTable(F);
+}
+buildControls();render();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if(!document.documentElement.dataset.theme)render();});
+</script>
+</body>
+</html>
